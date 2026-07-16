@@ -1,0 +1,3152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand Capabilities · Cobblestone Labs</title>
+<meta name="description" content="Cobblestone Labs Brand Capabilities - Where AI meets the physical world.">
+<meta property="og:title" content="Cobblestone Labs · Brand Capabilities">
+<meta property="og:description" content="Where AI meets the physical world and brands see the difference.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://use.typekit.net/nje3hle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;0,6..12,800;1,6..12,400&family=Nunito:wght@400;700;800&family=Quicksand:wght@600;700&display=block">
+<style>:root { --uw: 1vw; --uh: 1vh; }
+  body:not(.mobile-deck) { --uw: 14.4px; --uh: 8.1px; }
+  /* mobile: shrink the scale unit so every calc(N*--uw) font/spacing lands at its clamp floor (= our type floor), killing horizontal overflow */
+  body.mobile-deck { --uw: 3.0px; --uh: 6.0px; }
+  :root {
+    --bg:        #0a0a0d;
+    --bg-2:      #0d0c0f;
+    --panel:     rgba(22,21,26,0.70);
+    --panel-2:   rgba(18,16,21,0.55);
+    --peach:     #FFE2C0;
+    --peach-2:   #C47D6A;
+    --copper:    #C47D6A;
+    --copper-2:  #C10644;
+    --line:      rgba(196,125,106,0.50);
+    --line-soft: rgba(196,125,106,0.30);
+    --line-mute: rgba(255,226,192,0.08);
+    --body:      #D9DBF4;
+    --muted:     #7F83A7;
+    --white:     #FFF1E0;
+    --font-head: 'trade-gothic-next-condensed', 'Trade Gothic Next', sans-serif;
+    --font-body: 'avenir-next-lt-pro', 'Avenir Next', system-ui, sans-serif;
+    --font-mono: 'trade-gothic-next-condensed', 'Trade Gothic Next', sans-serif;
+    --inset: 34px;
+    --grad-04: linear-gradient(180deg, #FFE2C0 0%, #C47D6A 100%);
+    --grad-02: linear-gradient(180deg, #D9DBF4 0%, #7F83A7 100%);
+    --grad-05: #C10644;
+    --crimson: #C10644;
+  }
+  .g04-text { background: var(--grad-04); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  .g05-text { background: var(--grad-05); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { max-width: 100%; overflow-x: hidden; }
+  body { margin: 0; background: var(--bg); color: var(--body); font-family: var(--font-body); font-weight: 400; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+  img, video, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  .deck { width: 100%; }
+  .slide-stage { position: relative; width: 100%; overflow: hidden; background: var(--bg); }
+  .slide { position: relative; width: 1440px; min-height: 810px; display: flex; flex-direction: column; justify-content: center; padding: clamp(64px, calc(8 * var(--uh)), 110px) clamp(48px, calc(8 * var(--uw)), 150px); overflow: hidden; border-bottom: 1px solid var(--line-mute); transform-origin: top left; }
+  body.mobile-deck .slide { width: 100%; min-height: auto; transform: none; padding: 48px 24px; }
+  body.mobile-deck .slide-stage { height: auto !important; }
+  @media (max-width: 900px) {
+    .two-col, .cs-layout { grid-template-columns: 1fr !important; }
+    .split-img-panel { position: relative; width: 100%; height: 200px; }
+    .split-content { max-width: 100%; }
+    .logo-grid { grid-template-columns: repeat(4, 1fr) !important; }
+    .big-num { font-size: clamp(72px, 18vw, 140px); line-height: 1.0 !important; overflow: visible !important; padding-bottom: 0.06em !important; }
+    .quote-wrap { padding: 24px 20px !important; }
+    .quote-text { font-size: clamp(17px, 4.5vw, 26px) !important; }
+    /* s2 mobile: stack 3-col grid, restore slide-inner width, hide split image */
+    #s2 .slide-inner { max-width: 100% !important; }
+    .s2-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+    .s2-stat-inner { grid-template-columns: 1fr !important; gap: 14px !important; text-align: left; }
+    #s2 .split-img-panel { display: none; }
+    /* s5 redesign 2026-07-06: editorial layout, no grid overrides needed */
+    /* s8, s9, s10: two-col pillar slides */
+    #s8 .slide-inner > div,
+    #s9 .slide-inner > div,
+    #s10 .slide-inner > div { grid-template-columns: 1fr !important; gap: 24px !important; }
+    /* s6 two-col venue slide + s7: stack on mobile */
+    .s6-grid { grid-template-columns: 1fr !important; gap: 22px !important; }
+    #s7 .slide-inner > div { grid-template-columns: 1fr !important; gap: 22px !important; }
+    /* ITEM 7 FIX (2026-07-06 resume): s6 B2B card clip - allow slide to grow vertically, kill spacer divs */
+    #s6 .slide-inner { min-height: 0 !important; flex: none !important; padding-top: 36px !important; padding-bottom: 32px !important; }
+    #s6.slide { overflow: visible !important; min-height: auto !important; height: auto !important; }
+    #s6 .slide-inner > div[style*="flex:1"] { display: none !important; }
+    /* General mobile overflow guard for all slides */
+    .slide { overflow: visible !important; }
+    /* lab split: stack on mobile */
+    .lab-split { grid-template-columns: 1fr !important; }
+    /* s13 engage-grid */
+    .engage-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+    /* lab caps: single col on very narrow */
+    .lab-caps { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media (max-width: 480px) {
+    .logo-grid { grid-template-columns: repeat(3, 1fr) !important; }
+    h2.display { font-size: clamp(28px, 9vw, 48px) !important; }
+    .lede { font-size: clamp(16px, 4.2vw, 20px) !important; }
+    p { font-size: 16px !important; }
+    ul.bullets li { font-size: 16px !important; }
+    .lab-caps { grid-template-columns: 1fr !important; }
+    .s2-grid { grid-template-columns: 1fr !important; }
+  }
+  .slide-inner { position: relative; z-index: 2; width: 100%; max-width: 1180px; margin: 0 auto; padding-right: 0; }
+  @media (min-width: 1025px) { .slide-inner { padding-right: 8px; } }
+  .br { position: absolute; width: 26px; height: 26px; pointer-events: none; z-index: 5; opacity: 0.55; }
+  .br.tl { top: var(--inset); left: var(--inset); border-top: 1px solid var(--copper); border-left: 1px solid var(--copper); }
+  .br.tr { top: var(--inset); right: var(--inset); border-top: 1px solid var(--copper); border-right: 1px solid var(--copper); }
+  .br.bl { bottom: var(--inset); left: var(--inset); border-bottom: 1px solid var(--copper); border-left: 1px solid var(--copper); }
+  .br.brc { bottom: var(--inset); right: var(--inset); border-bottom: 1px solid var(--copper); border-right: 1px solid var(--copper); }
+  .counter { position: absolute; top: calc(var(--inset) + 4px); left: calc(var(--inset) + 78px); z-index: 6; font: 500 13px/1 var(--font-mono); letter-spacing: 0.30em; color: var(--peach); text-transform: uppercase; white-space: nowrap; }
+  .header-logo { position: absolute; top: calc(var(--inset) + 28px); right: calc(var(--inset) + 28px); z-index: 6; width: 118px; height: auto; pointer-events: none; }
+  .header-logo.big { width: 272px; top: calc(var(--inset) + 104px); right: calc(var(--inset) + 104px); }
+  .counter .sep { color: var(--copper); margin: 0 0.9em; }
+  .counter .cnt { color: var(--muted); }
+  .eyebrow { display: inline-block; font: 500 13px var(--font-mono); letter-spacing: 0.34em; text-transform: uppercase; margin-bottom: 26px; background: var(--grad-05); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  .eyebrow .tick { -webkit-text-fill-color: #C10644; color: #C10644; margin-right: 0.7em; }
+  h1, h2, h3 { font-family: var(--font-head); font-weight: 700; margin: 0; line-height: 0.96; letter-spacing: 0.06em; text-transform: uppercase; color: var(--peach); text-shadow: 0 2px 20px rgba(0,0,0,0.55); }
+  h2.display { font-size: clamp(40px, calc(5.4 * var(--uw)), 78px); overflow-wrap: break-word; word-break: normal; hyphens: none; background: linear-gradient(120deg, #FFE2C0, #C47D6A, #FFE2C0, #C47D6A); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; animation: warmShift 18s ease infinite; }
+  .subhead { font: 400 clamp(16px, calc(1.5 * var(--uw)), 19px) var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--peach-2); margin: 22px 0 0; line-height: 1.35; }
+  p { margin: 0 0 1em; line-height: 1.5; font-size: clamp(16px, calc(1.25 * var(--uw)), 19px); color: var(--body); }
+  p:last-child { margin-bottom: 0; }
+  .lede { font-size: clamp(18px, calc(1.55 * var(--uw)), 23px); line-height: 1.5; color: var(--body); max-width: 30em; }
+  .measure { max-width: 34em; }
+  .source { font: 500 13px var(--font-mono); letter-spacing: 0.22em; color: var(--muted); text-transform: uppercase; }
+  .label-mono { font: 500 13px var(--font-mono); letter-spacing: 0.30em; text-transform: uppercase; background: var(--grad-05); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  @keyframes warmShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+</style>
+<style>
+  /* Atmosphere layers */
+  #grain { position: fixed; inset: -50%; width: 200%; height: 200%; z-index: 999; pointer-events: none; opacity: 0.035; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 1 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>"); animation: grain-shift 0.12s steps(1) infinite; }
+  @keyframes grain-shift { 0%{transform:translate(0,0)} 20%{transform:translate(4%,2%)} 40%{transform:translate(-3%,5%)} 60%{transform:translate(5%,-2%)} 80%{transform:translate(-4%,1%)} 100%{transform:translate(0,0)} }
+  .orbs { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .orb { position: absolute; border-radius: 50%; filter: blur(8px); will-change: transform; }
+  .orb-1 { width: calc(46 * var(--uw)); height: calc(46 * var(--uw)); left: calc(-8 * var(--uw)); top: calc(-10 * var(--uw)); background: radial-gradient(circle, rgba(168,5,58,0.12) 0%, transparent 68%); animation: drift1 19s ease-in-out infinite; }
+  .orb-2 { width: calc(40 * var(--uw)); height: calc(40 * var(--uw)); right: calc(-6 * var(--uw)); top: calc(8 * var(--uw)); background: radial-gradient(circle, rgba(127,131,167,0.12) 0%, transparent 68%); animation: drift2 22s ease-in-out infinite; }
+  .orb-3 { width: calc(38 * var(--uw)); height: calc(38 * var(--uw)); left: calc(30 * var(--uw)); bottom: calc(-12 * var(--uw)); background: radial-gradient(circle, rgba(196,125,106,0.10) 0%, transparent 68%); animation: drift3 16s ease-in-out infinite; }
+  @keyframes drift1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(calc(4 * var(--uw)),calc(3 * var(--uw)))} }
+  @keyframes drift2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(calc(-3 * var(--uw)),calc(4 * var(--uw)))} }
+  @keyframes drift3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(calc(3 * var(--uw)),calc(-3 * var(--uw)))} }
+  .bloom { position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: radial-gradient(circle at 18% 14%, rgba(193,6,68,0.16) 0%, transparent 60%), radial-gradient(circle at 84% 28%, rgba(127,131,167,0.12) 0%, transparent 65%), radial-gradient(circle at 50% 88%, rgba(76,4,29,0.18) 0%, transparent 70%), radial-gradient(circle at 30% 60%, rgba(193,6,68,0.10) 0%, transparent 60%); }
+  /* BATCH8 item3a: more air between subtitle and capabilities list */
+  #s7 .s7-opener-left .s7-caps-strip { margin-top: clamp(121px, calc(17.2 * var(--uh)), 213px) !important; } /* BATCH30 2026-07-09: +half row-gap (row-gap clamp(34,4.4uh,58)/2) on top of BATCH27 2026-07-09 (slide-7 swap, from SANDBOX-S7): doubled top spacing to push grid down */
+  /* BATCH8 item4: s13 restack — title right, stacked engagement content left, delicate hairline cards */
+  #s13 .s13-b8-inner { width: 100%; max-width: 1240px; }
+  /* BATCH11 item1 2026-07-08: REVERT to batch-8 arrangement — title RIGHT, framed sections in narrower LEFT column (not full width); kept b9 frames + hairline cards */
+  #s13 .s13-b8-cols { display: flex; flex-direction: row; align-items: flex-start; gap: clamp(32px, calc(4.0 * var(--uw)), 64px); }
+  #s13 .s13-b8-titlecol h2.display { font-size: clamp(36px, calc(4.2 * var(--uw)), 62px); line-height: 1.02; overflow-wrap: break-word; }
+  #s13 .s13-b8-stack { flex: 0 0 56%; max-width: 56%; min-width: 0; display: flex; flex-direction: column; gap: clamp(20px, calc(2.6 * var(--uh)), 34px); }
+  #s13 .s13-b8-titlecol { flex: 1 1 auto; min-width: 0; display: flex; align-items: flex-start; justify-content: flex-end; text-align: right; padding-top: clamp(6px, calc(1.0 * var(--uh)), 16px); }
+  #s13 .s13-b8-titlecol h2.display { text-align: right; }
+  #s13 .s13-b9-frame { border: 1px solid rgba(255,226,192,0.30); background: rgba(12,10,18,0.28); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border-radius: 2px; padding: clamp(16px, calc(2.2 * var(--uh)), 26px) clamp(18px, calc(2.0 * var(--uw)), 28px); }
+  #s13 .s13-b8-cards.s13-b9-3up { display: grid; flex-direction: unset; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, calc(1.2 * var(--uw)), 16px); align-items: stretch; }
+  @media (max-width: 1024px) { #s13 .s13-b8-cards.s13-b9-3up { grid-template-columns: 1fr; } }
+  body.mobile-deck #s13 .s13-b8-cards.s13-b9-3up { grid-template-columns: 1fr !important; }
+  #s13 .s13-b8-h3 { font-family: var(--font-head); font-weight: 700; font-size: clamp(18px, calc(1.7 * var(--uw)), 26px); letter-spacing: 0.10em; text-transform: uppercase; color: var(--peach); margin: 0 0 10px; text-shadow: 0 1px 10px rgba(0,0,0,0.6); }
+  #s13 .s13-b8-lede { text-transform: uppercase; font-size: clamp(14px, calc(1.1 * var(--uw)), 16px); line-height: 1.55; color: var(--body); margin: 0 0 clamp(12px, calc(1.6 * var(--uh)), 18px); text-shadow: 0 1px 10px rgba(0,0,0,0.6); }
+  #s13 .s13-b8-cards { display: flex; flex-direction: column; gap: clamp(8px, calc(1.1 * var(--uh)), 12px); }
+  #s13 .s13-b8-card { border: 1px solid rgba(255,226,192,0.28); background: rgba(12,10,18,0.34); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); padding: clamp(10px, calc(1.4 * var(--uh)), 14px) clamp(14px, calc(1.5 * var(--uw)), 20px); font-family: var(--font-body); font-size: clamp(14px, calc(1.15 * var(--uw)), 17px); line-height: 1.55; color: rgba(233,230,244,0.94); text-shadow: 0 1px 10px rgba(0,0,0,0.6); border-radius: 2px; }
+  @media (max-width: 1024px) { #s13 .s13-b8-cols { flex-direction: column-reverse; } #s13 .s13-b8-stack { flex: 1 1 auto; max-width: none; } #s13 .s13-b8-titlecol { justify-content: flex-start; text-align: left; padding-top: 0; } #s13 .s13-b8-titlecol h2.display { text-align: left; } }
+  body.mobile-deck #s13 .s13-b8-cols { flex-direction: column-reverse !important; gap: 22px !important; }
+  body.mobile-deck #s13 .s13-b8-stack { flex: 1 1 auto !important; max-width: none !important; }
+  body.mobile-deck #s13 .s13-b8-titlecol { justify-content: flex-start !important; text-align: left !important; padding-top: 0 !important; }
+  body.mobile-deck #s13 .s13-b8-titlecol h2.display { text-align: left !important; }
+  /* BATCH8 item5c: s5 What-We-Deliver — very faint, very slow terracotta pulse bullets */
+  #s5 .s5-deliver .s5-why-row > div { position: relative; padding-left: 20px; }
+  #s5 .s5-deliver .s5-why-row > div::before { content: ''; position: absolute; left: 0; top: 0.52em; width: 8px; height: 8px; border-radius: 50%; background: #C47D6A; opacity: 0.45; animation: s5BulletPulse 5.5s ease-in-out infinite; }
+  @keyframes s5BulletPulse { 0%,100% { opacity: 0.30; } 50% { opacity: 0.62; } }
+  /* BATCH8 item7: scanline effect removed deck-wide per Theresa */
+  .scanline { display: none !important; animation: none !important; }
+  /* BATCH9 item1: s7 capabilities -> numbered sequential flow with thin arrows */
+  #s7 .s7-seq { align-items: flex-end !important; }
+  #s7 .s7-seq-item { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-width: 0; }
+  #s7 .s7-seq-num { font: 700 clamp(10px, calc(0.85 * var(--uw)), 13px) var(--font-mono); letter-spacing: 0.22em; background: linear-gradient(180deg, #C10644 0%, #4C041D 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; text-shadow: none; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85)); }
+  #s7 .s7-seq-arrow { flex: 0 0 auto; display: inline-block; font: 300 clamp(15px, calc(1.35 * var(--uw)), 23px)/1 var(--font-mono); color: rgba(225,175,149,0.50); padding-bottom: 0.18em; text-shadow: none; }
+  body.mobile-deck #s7 .s7-seq-arrow { transform: rotate(90deg) !important; transform-origin: center !important; align-self: flex-start !important; margin-left: 0.55em !important; padding-bottom: 0 !important; }
+  /* BATCH27 2026-07-09 (slide-7 swap): serpentine flow grid CSS ported from SANDBOX-S7 */
+    /* SANDBOX-S7 REDESIGN 2026-07-09: serpentine 4x2 flow grid (replaces thin strip) */
+  #s7 .s7-flow-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 1fr; column-gap: clamp(34px, calc(3.4 * var(--uw)), 56px); row-gap: clamp(34px, calc(4.4 * var(--uh)), 58px); width: 100%; box-sizing: border-box; position: relative; z-index: 2; }
+  #s7 .s7-flow-card { /* SANDBOX-S7 TWEAK 2026-07-09: no numbers, larger centered text */ position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: clamp(6px, calc(0.9 * var(--uh)), 10px); min-height: auto /* BATCH29 2026-07-09 */; padding: clamp(14px, calc(1.8 * var(--uh)), 20px) clamp(14px, calc(1.4 * var(--uw)), 20px); border: 1px solid rgba(255,226,192,0.28); border-radius: 2px; background: rgba(12,10,18,0.62); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); box-sizing: border-box; }
+  #s7 .s7-flow-card::before { content: ''; position: absolute; top: 0; left: 0; width: 34px; height: 1px; background: linear-gradient(90deg, #FFE2C0, #C47D6A); }
+  #s7 .s7-flow-num { font: 700 clamp(22px, calc(2.5 * var(--uw)), 38px) var(--font-mono); letter-spacing: 0.10em; line-height: 1; background: linear-gradient(180deg, #C10644 0%, #4C041D 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.85)); }
+  #s7 .s7-flow-lbl { font: 700 clamp(18px, calc(1.9 * var(--uw)), 30px) var(--font-mono); letter-spacing: 0.10em; text-transform: uppercase; line-height: 1.15; background: linear-gradient(180deg, #E1AF95 0%, #C47D6A 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  /* serpentine placement: row 1 L->R (01-04), row 2 R->L (05-08) */
+  #s7 .s7-flow-card[data-step="5"] { grid-column: 4; grid-row: 2; }
+  #s7 .s7-flow-card[data-step="6"] { grid-column: 3; grid-row: 2; }
+  #s7 .s7-flow-card[data-step="7"] { grid-column: 2; grid-row: 2; }
+  #s7 .s7-flow-card[data-step="8"] { grid-column: 1; grid-row: 2; }
+  /* connectors in the grid gaps, honest to sequence */
+  #s7 .s7-flow-card .s7-flow-arrow { display: none !important; /* BATCH42 2026-07-09: arrows removed */ position: absolute; font: 300 clamp(18px, calc(1.7 * var(--uw)), 26px)/1 var(--font-mono); color: rgba(225,175,149,0.55); text-shadow: none; pointer-events: none; }
+  #s7 .s7-flow-card.arr-right .s7-flow-arrow { top: 50%; right: calc(-1 * clamp(34px, calc(3.4 * var(--uw)), 56px)); width: clamp(34px, calc(3.4 * var(--uw)), 56px); transform: translateY(-50%); display: flex; align-items: center; justify-content: center; }
+  #s7 .s7-flow-card.arr-left .s7-flow-arrow { top: 50%; left: calc(-1 * clamp(34px, calc(3.4 * var(--uw)), 56px)); width: clamp(34px, calc(3.4 * var(--uw)), 56px); transform: translateY(-50%); display: flex; align-items: center; justify-content: center; }
+  #s7 .s7-flow-card.arr-down .s7-flow-arrow { left: 50%; bottom: calc(-1 * clamp(34px, calc(4.4 * var(--uh)), 58px)); height: clamp(34px, calc(4.4 * var(--uh)), 58px); transform: translateX(-50%); display: flex; align-items: center; justify-content: center; }
+  /* mobile: single column, all arrows point down */
+  body.mobile-deck #s7 .s7-flow-grid { grid-template-columns: 1fr !important; grid-auto-rows: auto !important; row-gap: 30px !important; }
+  body.mobile-deck #s7 .s7-flow-card { grid-column: auto !important; grid-row: auto !important; min-height: 0 !important; }
+  body.mobile-deck #s7 .s7-flow-card .s7-flow-arrow { top: auto !important; right: auto !important; left: 50% !important; bottom: -30px !important; width: auto !important; height: 30px !important; transform: translateX(-50%) !important; }
+  body.mobile-deck #s7 .s7-flow-card .s7-flow-arrow::before { content: '\2193'; }
+  body.mobile-deck #s7 .s7-flow-card .s7-flow-arrow span { display: none; }
+  body.mobile-deck #s7 .s7-flow-card:last-of-type .s7-flow-arrow, body.mobile-deck #s7 .s7-flow-card[data-step="8"] .s7-flow-arrow { display: none !important; }
+  /* BATCH9 item4: s12 mobile keeps a border on the aerial photo (desktop transparent render is borderless) */
+  body.mobile-deck #s12 .s12-render-wrap { border: 1px solid rgba(196,125,106,0.30) !important; }
+  @media (max-width: 900px) { #s12 .s12-render-wrap { border: 1px solid rgba(196,125,106,0.30) !important; } }
+  @keyframes scan { 0%{transform:translateY(0);opacity:0} 8%{opacity:1} 92%{opacity:1} 100%{transform:translateY(calc(100 * var(--uh)));opacity:0} }
+  .regmark { display: none !important; }
+  /* Slide bg helper */
+  .slide-bg { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center; background-repeat: no-repeat; }
+  .slide-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,13,0.60) 0%, rgba(10,10,13,0.35) 40%, rgba(10,10,13,0.65) 100%); }
+  /* Finished-mockup slides (cover, The Lab): image already designed with text - show full-bleed, no dim overlay. */
+  .slide-bg.mockup-bg::after { display: none; }
+  .slide-bg.mockup-bg { background-size: contain; background-color: #0a0a0d; }
+  /* img-placeholder for logo reel */
+  .img-placeholder { border: 1px solid var(--line); background: repeating-linear-gradient(135deg, rgba(217,140,95,0.05) 0 14px, transparent 14px 28px), var(--panel-2); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; color: var(--muted); font: 500 12px var(--font-mono); letter-spacing: 0.22em; text-transform: uppercase; text-align: center; padding: 24px; }
+  .img-placeholder .ph-icon { font-size: 26px; color: var(--copper); }
+  /* bullet list */
+  ul.bullets { list-style: none; margin: 18px 0 0; padding: 0; }
+  ul.bullets li { position: relative; padding-left: 22px; margin-bottom: 10px; font-size: clamp(16px, calc(1.2 * var(--uw)), 18px); color: var(--body); line-height: 1.5; }
+  ul.bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--copper); font-size: 10px; top: 4px; }
+  /* two-col layout helper */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, calc(5 * var(--uw)), 84px); align-items: start; }
+  @media (max-width: 1024px) { .two-col { grid-template-columns: 1fr; gap: 28px; } }
+  /* panel card */
+  .panel-card { border: 1px solid var(--line); background: rgba(14,13,17,0.65); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); padding: clamp(28px, calc(3 * var(--uw)), 42px); }
+  /* big numeral */
+  .big-num { font-family: var(--font-head); font-weight: 700; font-size: clamp(100px, calc(14 * var(--uw)), 200px); line-height: 1.0; letter-spacing: -0.02em; background: linear-gradient(160deg, #C10644 0%, #4C041D 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; display: block; overflow: visible; padding-bottom: 0.06em; }
+  /* delivery bar */
+  .delivery-bar { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 32px; }
+  .delivery-bar .db-item { font: 500 14px var(--font-mono); letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); position: relative; }
+  .delivery-bar .db-item:not(:last-child)::after { content: '·'; position: absolute; right: -14px; color: var(--copper); }
+  /* hero delivery bar (s7) - large gradient items */
+  .delivery-bar.delivery-hero { gap: clamp(14px, calc(1.8 * var(--uh)), 28px) clamp(24px, calc(3 * var(--uw)), 52px); margin-top: clamp(32px, calc(4.5 * var(--uh)), 56px); }
+  .delivery-bar.delivery-hero .db-item { font: 700 clamp(22px, calc(2.8 * var(--uw)), 44px) var(--font-head); letter-spacing: 0.12em; text-transform: uppercase; background: linear-gradient(135deg, #EDEEFC 0%, #C3C6EC 40%, #565A82 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; position: relative; }
+  .delivery-bar.delivery-hero .db-item:not(:last-child)::after { content: '·'; position: absolute; right: calc(-1 * clamp(14px, calc(1.8 * var(--uw)), 30px)); -webkit-text-fill-color: var(--copper); color: var(--copper); background: none; font-size: clamp(18px, calc(2 * var(--uw)), 32px); }
+  /* s7 FULL-BLEED - court photo spans whole slide, translucent left→right scrim */
+  #s7 { padding: 0 !important; justify-content: stretch; align-items: stretch; overflow: hidden; height: 810px; }
+  /* Full-bleed court photo as slide background */
+  #s7 .slide-bg-s7 { position: absolute; inset: 0; z-index: 0; background-image: url('assets/court-player-wide.webp'); background-size: cover; background-position: 60% center; }
+  /* ITEM 9b: full-bleed layout - wrap is now a column with title top + caps bottom */
+  #s7 .s7-split-wrap { position: relative; z-index: 2; display: flex; flex-direction: column; width: 100%; height: 100%; min-height: 100%; justify-content: space-between; padding: clamp(56px, calc(7 * var(--uh)), 88px) clamp(48px, calc(5.5 * var(--uw)), 80px) clamp(48px, calc(6 * var(--uh)), 72px); box-sizing: border-box; }
+  /* LEFT/TITLE PANEL: full width, positioned at top */
+  #s7 .s7-left { flex: none; width: 100%; display: flex; flex-direction: column; padding: 0; box-sizing: border-box; position: relative; z-index: 3; gap: clamp(12px, calc(1.5 * var(--uh)), 20px); }
+  /* ITEM 9b (2026-07-06) EXPERIMENT: left-half scrim REMOVED so photo shows full bleed.
+     Replaced with a bottom-only gradient scrim behind the capabilities bar only. */
+  #s7 .s7-left-scrim { display: none; }
+  /* Bottom capabilities scrim: dark band at bottom half for legibility */
+  #s7 .s7-bottom-scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(8,6,14,0.05) 0%, rgba(8,6,14,0.10) 40%, rgba(8,6,14,0.72) 68%, rgba(8,6,14,0.88) 100%); pointer-events: none; }
+  /* Global bg: slight overall dark overlay for title legibility */
+  #s7 .slide-bg-s7 { filter: brightness(0.75); }
+  /* RIGHT panel: hidden in full-bleed layout (bg shows through full slide) */
+  #s7 .s7-right { display: none; }
+  #s7 .s7-photo { display: none; }
+  #s7 .s7-fade { display: none; }
+  /* TITLE area */
+  #s7 .s7-title-block { display: flex; flex-direction: column; gap: 0; position: relative; z-index: 2; }
+  /* ITEM8 batch6: s7 title uses animated warmShift brand gradient (NOT static) */
+  #s7 .s7-title-block { position: relative; z-index: 2; } /* MUST stay z-index:2 above .s7-left-scrim (z-index:1) */
+  #s7 .s7-title-block h2.display { font-size: clamp(28px, calc(3.6 * var(--uw)), 54px); line-height: 0.96; margin: 0; background: linear-gradient(120deg, #FFE2C0, #C47D6A, #FFE2C0, #C47D6A) !important; background-size: 300% 100% !important; background-clip: text !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; color: transparent !important; animation: warmShift 18s ease infinite !important; text-shadow: none !important; }
+  h2.s7-title, #s7 h2.s7-title { font-family: var(--font-head); font-weight: 700; font-size: clamp(28px, calc(3.6 * var(--uw)), 54px); line-height: 0.96; overflow-wrap: break-word; word-break: normal; hyphens: none; margin: 0; background: linear-gradient(120deg, #FFE2C0, #C47D6A, #FFE2C0, #C47D6A) !important; background-size: 300% 100% !important; background-clip: text !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; color: transparent !important; animation: warmShift 18s ease infinite !important; text-shadow: none !important; }
+  #s7 .s7-accent-bar { width: 110px; height: 1px; background: linear-gradient(90deg, #FFE2C0, #C47D6A); border-radius: 1px; margin: clamp(8px, calc(1.0 * var(--uh)), 14px) 0; flex-shrink: 0; }
+  /* ITEM 8 FIX (resume 2026-07-06): tagline MUCH larger - real prominent subtitle, not a kicker */
+  #s7 .s7-tagline { font: 400 clamp(22px, calc(2.8 * var(--uw)), 40px) var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: rgba(217,219,244,1.0); line-height: 1.4; margin: clamp(12px, calc(1.5 * var(--uh)), 22px) 0 0; text-shadow: 0 2px 14px rgba(0,0,0,0.95); }
+  /* ICON GRID */
+  #s7 .s7-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(8px, calc(0.9 * var(--uw)), 14px); background: rgba(8,7,12,0.90); border-radius: 10px; padding: clamp(10px, calc(1.2 * var(--uh)), 18px) clamp(8px, calc(1.0 * var(--uw)), 14px); position: relative; z-index: 2; }
+  /* ITEM7: stronger card bg so icons/labels pop */
+  #s7 .s7-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(7px, calc(0.8 * var(--uh)), 12px); padding: clamp(12px, calc(1.5 * var(--uh)), 20px) clamp(8px, calc(1.0 * var(--uw)), 16px); border: 1px solid rgba(255,226,192,0.25); border-radius: 6px; background: rgba(12,10,18,0.95); backdrop-filter: none; -webkit-backdrop-filter: none; text-align: center; cursor: default; }
+  /* NO hover effects - static informational tiles */
+  #s7 .s7-card:hover { background: rgba(12,10,18,0.95) !important; border-color: rgba(255,226,192,0.25) !important; box-shadow: none !important; transform: none !important; color: inherit !important; }
+  #s7 .s7-icon { color: #C47D6A; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  #s7 .s7-icon svg { width: clamp(22px, calc(2.4 * var(--uw)), 36px); height: clamp(22px, calc(2.4 * var(--uw)), 36px); stroke: #FFE2C0; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+  #s7 .s7-icon svg polygon[fill="currentColor"] { fill: #FFE2C0; }
+  #s7 .s7-card-lbl { font: 700 clamp(9px, calc(0.85 * var(--uw)), 13px) var(--font-head); letter-spacing: 0.18em; text-transform: uppercase; color: #FFF1E0; }
+  /* ITEM 9 FIX (resume 2026-07-06): capabilities - Trade Gothic, explicit white/peach color on DESKTOP, horizontal single-row bar */
+  #s7 .s7-words > div {
+    font-family: var(--font-head) !important;
+    font-weight: 700 !important;
+    font-size: clamp(16px, calc(1.55 * var(--uw)), 26px) !important;
+    letter-spacing: 0.10em !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    color: #FFE2C0 !important;
+    -webkit-text-fill-color: #FFE2C0 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.85) !important;
+  }
+  /* Horizontal capabilities band - single row across bottom, no wrap */
+  #s7 .s7-words {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 0 !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: clamp(14px, calc(1.8 * var(--uh)), 24px) clamp(20px, calc(2.2 * var(--uw)), 36px) !important;
+    background: rgba(8,5,14,0.75) !important;
+    border: 1px solid rgba(196,125,106,0.28) !important;
+    border-left: 3px solid var(--copper) !important;
+    border-radius: 10px !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  /* Separator dots between caps items */
+  #s7 .s7-words > div:not(:last-child)::after { content: '·'; display: inline-block; margin-left: clamp(8px, calc(0.9 * var(--uw)), 16px); color: var(--copper); opacity: 0.70; font-size: 1em; }
+  /* Hide the flex column direction override from batch rules */
+  #s7 { overflow: hidden !important; }
+  /* BATCH4: s7 opener layout — start-aligned column; enlarged title+tagline; caps strip below */
+  #s7 .s7-opener-wrap { justify-content: flex-start !important; gap: 0 !important; }
+  #s7 .s7-opener-left { justify-content: flex-start !important; width: 100% !important; }
+  /* Allow caps strip to show without clipping */
+  #s7 { overflow: visible !important; height: auto !important; min-height: 810px !important; }
+  /* Larger opener title for readability */
+  #s7 .s7-opener-title { font-size: clamp(42px, calc(5.8 * var(--uw)), 88px) !important; line-height: 0.96 !important; }
+  /* Larger tagline for readability - prominent subtitle */
+  #s7 .s7-opener-tagline { font-size: clamp(26px, calc(3.2 * var(--uw)), 52px) !important; letter-spacing: 0.10em !important; line-height: 1.35 !important; margin-top: clamp(30px, calc(3.8 * var(--uh)), 60px) !important; }
+  /* Lighter brightness on bg so court people read clearly */
+  #s7 .slide-bg-s7 { filter: brightness(0.85) !important; }
+  body.mobile-deck #s7 .s7-opener-title { font-size: clamp(22px, 6.5vw, 38px) !important; word-break: break-word !important; overflow-wrap: break-word !important; white-space: normal !important; overflow: visible !important; }
+  body.mobile-deck #s7 .s7-opener-tagline { font-size: clamp(20px, 5.5vw, 34px) !important; }
+  /* Mobile: stack caps items vertically */
+  body.mobile-deck #s7 .s7-caps-items { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+  body.mobile-deck #s7 .s7-cap-sep { display: none !important; }
+  body.mobile-deck #s7 .s7-cap-item { font-size: clamp(14px, 4.0vw, 20px) !important; white-space: normal !important; word-break: keep-all !important; overflow-wrap: normal !important; hyphens: none !important; }
+  /* Mobile: stack - photo banner on top, title+tagline, 2-col grid below */
+  body.mobile-deck #s7 { justify-content: flex-start; align-items: stretch; padding: 0 !important; }
+  body.mobile-deck #s7 .s7-split-wrap { flex-direction: column; height: auto; min-height: auto; }
+  body.mobile-deck #s7 .s7-right { flex: none; width: 100%; height: 240px; order: -1; max-width: 100%; }
+  body.mobile-deck #s7 .slide-bg-s7 { background-position: 55% 30%; }
+  body.mobile-deck #s7 .s7-left-scrim { background: linear-gradient(90deg, rgba(8,7,12,0.97) 0%, rgba(8,7,12,0.95) 55%, rgba(8,7,12,0.82) 78%, rgba(8,7,12,0.45) 100%), linear-gradient(180deg, rgba(8,7,12,0.55) 0%, rgba(8,7,12,0.35) 50%, rgba(8,7,12,0.60) 100%) !important; }
+  body.mobile-deck #s7 { min-height: auto !important; height: auto !important; }
+  body.mobile-deck #s7 .s7-left { flex: none; width: 100%; box-sizing: border-box; padding: 24px 20px 40px 20px; gap: 16px; overflow: visible; }
+  body.mobile-deck #s7 .s7-title-block h2.display { font-size: clamp(26px, 7vw, 40px); }
+  /* ITEM 8 FIX (resume): mobile tagline — prominent subtitle, not kicker */
+  body.mobile-deck #s7 .s7-tagline { font-size: clamp(20px, 5.8vw, 32px) !important; letter-spacing: 0.08em !important; line-height: 1.35 !important; margin-top: 16px !important; }
+  /* ITEM 9 FIX (resume): s7 mobile - words go vertical (stacked), full-width layout */
+  body.mobile-deck #s7 .s7-split-wrap {
+    padding: 32px 20px 28px 20px !important;
+    gap: 20px !important;
+  }
+  body.mobile-deck #s7 .s7-words {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+    justify-content: flex-start !important;
+  }
+  /* Hide dot separators on mobile (stacked layout) */
+  body.mobile-deck #s7 .s7-words > div:not(:last-child)::after { display: none !important; }
+  /* ITEM 9 FIX (resume 2026-07-06): s7 mobile capabilities - Trade Gothic, peach/white (match desktop), stacked */
+  body.mobile-deck #s7 .s7-words > div {
+    font-family: var(--font-head) !important;
+    font-weight: 700 !important;
+    font-size: clamp(20px, 5.5vw, 32px) !important;
+    letter-spacing: 0.10em !important;
+    text-transform: uppercase !important;
+    color: #FFE2C0 !important;
+    -webkit-text-fill-color: #FFE2C0 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.85) !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+  body.mobile-deck #s7 .s7-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px !important; width: 100%; box-sizing: border-box; padding-right: 0; }
+  body.mobile-deck #s7 .s7-card { padding: 14px 8px; gap: 8px; box-sizing: border-box; min-width: 0; max-width: 100%; overflow: hidden; }
+  body.mobile-deck #s7 .s7-icon svg { width: 24px; height: 24px; }
+  body.mobile-deck #s7 .s7-card-lbl { font-size: clamp(10px, 3.2vw, 13px); word-break: break-word; }
+  /* Ensure corner brackets don't overlap icon cards on mobile */
+  body.mobile-deck #s7 .br.bl, body.mobile-deck #s7 .br.brc { z-index: 1; opacity: 0.30; }
+  /* hide navdots on mobile to avoid overlap */
+  body.mobile-deck .navdots { display: none !important; }
+  /* ITEM3: hide slide-number counter on mobile */
+  body.mobile-deck .counter { display: none !important; }
+  /* batch6: s15 title min size too wide for phones -> "SELE/CTIONS" mid-word split; scale with viewport */
+  body.mobile-deck #s15 h2.display { font-size: clamp(30px, 10.5vw, 52px) !important; word-break: keep-all; overflow-wrap: normal; }
+  /* batch6 item4: hero logo LARGE + legible on mobile (was shrunk to 18vw). Centered lockup, desktop unchanged. */
+  body.mobile-deck #cover img[alt="Cobblestone Labs"] { width: clamp(240px, 78vw, 340px) !important; margin-bottom: 20px !important; }
+  @media (max-width: 900px) {
+    #s7 { height: auto !important; min-height: auto !important; overflow: visible !important; }
+    #s7 .s7-split-wrap { flex-direction: column; height: auto; }
+    #s7 .s7-right { flex: none; width: 100%; height: 240px; order: -1; max-width: 100%; }
+    #s7 .s7-fade { background: linear-gradient(to bottom, rgba(25,22,32,0) 0%, rgba(25,22,32,0) 60%, rgba(25,22,32,0.90) 100%); }
+    #s7 .s7-left { flex: none; width: 100%; box-sizing: border-box; padding: 24px 20px 36px 20px; gap: 16px; overflow: visible; }
+    #s7 .s7-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px !important; width: 100%; box-sizing: border-box; }
+    #s7 .s7-card { box-sizing: border-box; min-width: 0; overflow: hidden; }
+    /* batch4: caps strip stack on mobile */
+    #s7 .s7-caps-items { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+    #s7 .s7-cap-sep { display: none !important; }
+    #s7 .s7-cap-item { font-size: clamp(20px, 5.5vw, 28px) !important; white-space: normal !important; }
+    /* BATCH9 item1: stacked vertical sequence — arrows point down */
+    #s7 .s7-seq-arrow { transform: rotate(90deg) !important; transform-origin: center !important; align-self: flex-start !important; margin-left: 0.55em !important; padding-bottom: 0 !important; }
+    /* BATCH27 2026-07-09: serpentine flow grid stacks on narrow viewports; connector arrows hidden */
+    #s7 .s7-flow-grid { grid-template-columns: 1fr !important; grid-auto-rows: auto !important; row-gap: 14px !important; }
+    #s7 .s7-flow-card { grid-column: auto !important; grid-row: auto !important; min-height: 0 !important; }
+    #s7 .s7-flow-card .s7-flow-arrow { display: none !important; }
+  }
+  /* logo reel */
+  .logo-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: clamp(10px, calc(1.2 * var(--uw)), 18px); max-width: 1160px; margin: 0 auto; }
+  @media (max-width: 1024px) { .logo-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 600px) { .logo-grid { grid-template-columns: repeat(3, 1fr); } }
+  .logo-tile { display: flex; align-items: center; justify-content: center; background: transparent; border: none; border-radius: 8px; padding: clamp(10px, calc(1.4 * var(--uw)), 22px); aspect-ratio: 5/3; overflow: hidden; transition: opacity 0.2s; }
+  .logo-tile:hover .logo-img { opacity: 1; }
+  .logo-img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  /* logos are pre-processed white-on-transparent PNGs (clean knockout, no baked boxes) */
+  .logo-white { opacity: 0.78; transition: opacity 0.2s; }
+  .logo-png { opacity: 0.82; transition: opacity 0.2s; }
+  /* frosted logo tile treatment (T10) */
+  .logo-tile-frost {
+    background: rgba(22, 20, 28, 0.55) !important;
+    border: 1px solid rgba(196, 125, 106, 0.28) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.28), inset 0 1px 0 rgba(217,219,244,0.07);
+    transition: box-shadow 0.22s ease, border-color 0.22s ease;
+    border-radius: 6px !important;
+    padding: clamp(14px, calc(1.8 * var(--uw)), 28px) !important;
+  }
+  .logo-tile-frost:hover {
+    border-color: rgba(217,219,244,0.40) !important;
+    box-shadow: 0 4px 24px rgba(196,125,106,0.20), 0 0 0 1px rgba(196,125,106,0.18), inset 0 1px 0 rgba(217,219,244,0.10);
+  }
+  .logo-tile-frost .logo-white { opacity: 0.88; }
+  .logo-tile-frost .logo-png { opacity: 0.92; }
+  .logo-tile-frost:hover .logo-white,
+  .logo-tile-frost:hover .logo-png { opacity: 1; }
+  /* ===== LOGO CAROUSEL (s4) ===== */
+  .logo-carousel-wrap {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
+  .logo-carousel-track {
+    display: flex;
+    align-items: center;
+    gap: clamp(48px, calc(6 * var(--uw)), 96px);
+    width: max-content;
+    animation: logo-scroll 75s linear infinite;
+  }
+  .logo-carousel-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes logo-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .logo-carousel-track { animation: none; }
+    .logo-carousel-wrap { overflow-x: auto; }
+  }
+  .logo-car-item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(180px, calc(18 * var(--uw)), 260px);
+    height: clamp(96px, calc(11 * var(--uh)), 140px);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: opacity 0.2s;
+  }
+  .logo-car-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    opacity: 0.82;
+    filter: brightness(1.2) contrast(1.08);
+    transition: opacity 0.2s;
+  }
+  .logo-car-item:hover img { opacity: 0.75; }
+  body.mobile-deck .logo-car-item {
+    width: 140px !important;
+    height: 78px !important;
+    padding: 0 !important;
+  }
+  /* s4 mobile: 2026-07-08 fix — old rule collapsed the flex:1 spacer, but BATCH7 moved the
+     logo grid INTO a flex:1 wrapper, so the rule clipped the logos to 0 height on mobile.
+     Let the logo wrapper size to its content instead. */
+  body.mobile-deck #s4 .slide-inner > div[style*="flex:1"] { flex: 0 1 auto !important; max-height: none !important; overflow: visible !important; }
+  body.mobile-deck #s4 .slide-inner { padding-bottom: clamp(24px, 4vh, 40px) !important; }
+  /* s4 logo grid mobile: wrap rows to 3-wide by constraining cell width */
+  /* s4 mobile: 2-col grid so logos NEVER overlap (batch6) */
+  body.mobile-deck #s4 .s4-logo-grid { max-width: 100% !important; gap: 12px !important; padding: 0 8px; }
+  body.mobile-deck #s4 .s4-logo-grid > div { flex-wrap: wrap !important; gap: 10px !important; }
+  body.mobile-deck #s4 .s4-logo-grid > div > div { flex: 0 1 44% !important; max-width: 44% !important; min-width: 0; box-sizing: border-box; }
+  @media (max-width: 900px) {
+    #s4 .s4-logo-grid { max-width: 100% !important; gap: 12px !important; padding: 0 8px; }
+    #s4 .s4-logo-grid > div { flex-wrap: wrap !important; gap: 10px !important; }
+    #s4 .s4-logo-grid > div > div { flex: 0 1 44% !important; max-width: 44% !important; min-width: 0; box-sizing: border-box; }
+  }
+  @media (max-width: 900px) {
+    #s4 .slide-inner > div[style*="flex:1"] { flex: 0 !important; max-height: 0 !important; overflow: hidden !important; }
+    #s4 .slide-inner { padding-bottom: clamp(24px, 4vh, 40px) !important; }
+  }
+  /* mixology panorama bottom band */
+  .mixology-band {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    height: clamp(200px, calc(30 * var(--uh)), 360px);
+  }
+  .mixology-band::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 70%;
+    z-index: 2;
+    background: linear-gradient(180deg, #0a0a0d 0%, #0a0a0d 8%, rgba(10,10,13,0.6) 45%, rgba(10,10,13,0) 100%);
+    pointer-events: none;
+  }
+  .mixology-band img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 62%;
+    display: block;
+    opacity: 0.92;
+  }
+  .mixology-band::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,13,0.85) 0%, rgba(10,10,13,0.25) 26%, rgba(10,10,13,0.15) 60%, rgba(10,10,13,0.45) 100%);
+  }
+
+  /* navdots */
+  .navdots { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 900; display: flex; flex-direction: column; gap: 8px; }
+  .navdots a { display: block; width: 7px; height: 7px; border-radius: 50%; background: rgba(196,125,106,0.35); border: 1px solid rgba(196,125,106,0.5); transition: background 0.2s; }
+  .navdots a.active { background: var(--copper); }
+  /* reveal */
+  .js-reveal .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .js-reveal .reveal.in { opacity: 1; transform: none; }
+  /* case study layout */
+  .cs-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, calc(5 * var(--uw)), 80px); align-items: start; margin-top: clamp(28px, calc(3.5 * var(--uh)), 48px); }
+  @media (max-width: 1024px) { .cs-layout { grid-template-columns: 1fr; } }
+  .cs-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 1px solid var(--line); display: block; }
+  .cs-img-secondary { width: 100%; aspect-ratio: 16/9; object-fit: cover; border: 1px solid var(--line-soft); display: block; margin-top: 16px; }
+  .cs-kicker { font: 500 13px var(--font-mono); letter-spacing: 0.30em; text-transform: uppercase; color: var(--crimson); margin-bottom: 16px; }
+  .cs-title { font-family: var(--font-head); font-weight: 700; font-size: clamp(32px, calc(4 * var(--uw)), 56px); letter-spacing: 0.08em; text-transform: uppercase; color: var(--peach); margin: 0 0 16px; line-height: 0.96; }
+  .cs-body { font-size: clamp(16px, calc(1.2 * var(--uw)), 18px); color: var(--body); line-height: 1.6; margin-bottom: 24px; }
+  .cs-section-label { font: 700 13px var(--font-mono); letter-spacing: 0.26em; text-transform: uppercase; color: var(--peach-2); margin: 20px 0 10px; }
+  .cs-results { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; margin-top: 10px; }
+  .cs-results .result-item { font-size: clamp(14px, calc(1.1 * var(--uw)), 16px); color: var(--body); }
+  .cs-results .result-val { display: block; font-family: var(--font-head); font-size: clamp(22px, calc(2.2 * var(--uw)), 30px); color: var(--peach); letter-spacing: 0.04em; }
+  /* BATCH34 2026-07-09 (row-gap halved BATCH35 2026-07-09): s17+s18 Results — space between the two stat rows */
+  #s17 .cs-results, #s18 .cs-results { row-gap: clamp(26px, calc(3 * var(--uh)), 32px); }
+  /* BATCH35 2026-07-09: s17+s18 desktop — a bit more space above the RESULTS heading (mobile untouched) */
+  body:not(.mobile-deck) #s17 .cs-section-label:has(+ .cs-results), body:not(.mobile-deck) #s18 .cs-section-label:has(+ .cs-results) { margin-top: 34px !important; }
+  /* BATCH38 2026-07-09: s4 desktop-only logo width tweaks (mobile keeps inline 340px) */
+  body:not(.mobile-deck) #s4 img[src*="showtime-solid"] { max-width: 170px !important; }
+  body:not(.mobile-deck) #s4 img[src*="sunbeam-solid"] { max-width: 209px !important; }
+  /* stat card for Slide 2 */
+  .stat-big { font-family: var(--font-head); font-weight: 700; font-size: clamp(48px, calc(5.6 * var(--uw)), 82px); line-height: 0.9; letter-spacing: -0.01em; background: linear-gradient(120deg, #FFE2C0, #C47D6A, #FFE2C0, #C47D6A); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; animation: warmShift 18s ease infinite; }
+  /* contact slide */
+  .contact-card { border: 1px solid var(--line); background: var(--panel-2); padding: 32px 40px; margin-top: 8px; }
+  .contact-name { font-family: var(--font-head); font-weight: 700; font-size: clamp(20px, calc(1.8 * var(--uw)), 26px); letter-spacing: 0.10em; text-transform: uppercase; color: var(--peach); margin-bottom: 8px; }
+  .contact-detail { font-size: clamp(16px, calc(1.2 * var(--uw)), 18px); color: var(--body); margin-bottom: 4px; }
+  /* lab capability grid */
+  .lab-caps { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, calc(1.6 * var(--uw)), 22px); margin-top: clamp(28px, calc(3.5 * var(--uh)), 44px); }
+  @media (max-width: 1024px) { .lab-caps { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 760px) { .lab-caps { grid-template-columns: 1fr; } }
+  .lab-cap { border: 1px solid var(--line-soft); background: var(--panel-2); padding: 22px 24px; }
+  .lab-cap h4 { font-family: var(--font-head); font-weight: 700; font-size: clamp(15px, calc(1.2 * var(--uw)), 18px); letter-spacing: 0.10em; text-transform: uppercase; color: var(--peach); margin: 0 0 10px; line-height: 1.15; }
+  .lab-cap p { font-size: clamp(15px, calc(1.1 * var(--uw)), 17px); color: var(--body); margin: 0; line-height: 1.55; }
+  /* The Lab - split layout: 3 cards | center renders | 3 cards (matches partnership 2-pager) */
+  .lab-split { display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: clamp(16px, calc(1.8 * var(--uw)), 30px); align-items: center; margin-top: clamp(20px, calc(2.6 * var(--uh)), 36px); }
+  .lab-col { display: flex; flex-direction: column; gap: clamp(12px, calc(1.4 * var(--uh)), 20px); }
+  .lab-sys { border: 1px solid var(--line-soft); background: rgba(14,13,17,0.62); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); padding: clamp(14px, calc(1.5 * var(--uw)), 20px) clamp(15px, calc(1.6 * var(--uw)), 22px); border-left: 2px solid var(--copper); }
+  .lab-sys h4 { font-family: var(--font-head); font-weight: 700; font-size: clamp(15px, calc(1.2 * var(--uw)), 18px); letter-spacing: 0.06em; text-transform: uppercase; color: var(--peach); margin: 0 0 8px; line-height: 1.2; }
+  .lab-sys p { font-size: clamp(14px, calc(1.05 * var(--uw)), 16px); color: var(--body); margin: 0; line-height: 1.5; }
+  .lab-center { display: flex; flex-direction: column; gap: clamp(14px, calc(1.6 * var(--uh)), 24px); align-items: center; }
+  .lab-render-img { width: 100%; height: auto; display: block; object-fit: contain; filter: drop-shadow(0 24px 48px rgba(0,0,0,0.55)); }
+  @media (max-width: 1024px) { .lab-split { grid-template-columns: 1fr; } .lab-center { order: -1; } }
+  /* engagement types */
+  .engage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, calc(3.5 * var(--uw)), 56px); margin-top: clamp(32px, calc(4 * var(--uh)), 56px); }
+  @media (max-width: 1024px) { .engage-grid { grid-template-columns: 1fr; } }
+  .engage-card { border: 1px solid var(--line); background: var(--panel-2); padding: clamp(28px, calc(3 * var(--uw)), 44px); }
+  /* batch6 item3b: R&D card trimmed to one bullet. Keep headers top-aligned across both cards;
+     space content evenly down the card so it doesn't pool at the top. */
+  /* BATCH12: nth-child(2) special-casing removed — both engage-cards now symmetric (3 bullets each) */
+  .engage-card h3 { font-family: var(--font-head); font-weight: 700; font-size: clamp(18px, calc(1.6 * var(--uw)), 24px); letter-spacing: 0.10em; text-transform: uppercase; color: var(--peach); margin: 0 0 14px; }
+  .engage-card p { font-size: clamp(16px, calc(1.2 * var(--uw)), 18px); color: var(--body); margin-bottom: 16px; }
+  /* split-image slide: image panel pinned to right side */
+  .split-img-panel { position: absolute; top: 0; right: 0; width: 40%; height: 100%; z-index: 0; overflow: hidden; }
+  .split-img-panel img { width: 100%; height: 100%; object-fit: cover; object-position: right center; display: block; }
+  .split-img-panel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--bg) 0%, rgba(10,10,13,0.55) 22%, transparent 55%); }
+  .split-content { position: relative; z-index: 2; max-width: 58%; }
+  @media (max-width: 1024px) { .split-img-panel { position: relative; width: 100%; height: 260px; } .split-content { max-width: 100%; } }
+  /* dark-only slide: no image bg */
+  .slide.dark-only { background: linear-gradient(135deg, #0a0a0d 0%, #0f0d14 60%, #0a0a0d 100%); }
+  /* quote slide */
+  .quote-wrap { text-align: center; max-width: 900px; margin: 0 auto; }
+  .quote-mark { font-family: var(--font-head); font-size: clamp(60px, calc(8 * var(--uw)), 120px); line-height: 0.5; color: var(--copper); display: block; margin-bottom: 20px; opacity: 0.5; }
+  .quote-text { font-family: var(--font-body); font-style: italic; font-size: clamp(20px, calc(2.2 * var(--uw)), 32px); line-height: 1.45; color: var(--peach); margin: 0 0 28px; }
+  .quote-attr { font: 500 13px var(--font-mono); letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); }
+  .quote-rule { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, var(--copper), transparent); margin: 20px auto; }
+  /* ─── R5: Right-side quote card for s3; LEFT-side for s11 (ITEM8) ─── */
+  .s3-inner { display: flex; align-items: center; justify-content: flex-end; width: 100%; height: 100%; padding: 0; }
+  .s11-inner { display: flex; align-items: center; justify-content: flex-start; width: 100%; height: 100%; padding: 0; }
+  .quote-card-right {
+    background: rgba(13,17,23,0.92);
+    border-radius: 0;
+    width: clamp(320px, calc(36 * var(--uw)), 520px);
+    max-width: 38%;
+    padding: clamp(32px, calc(4 * var(--uh)), 56px) clamp(28px, calc(3 * var(--uw)), 48px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, calc(2.5 * var(--uh)), 36px);
+    margin-right: clamp(40px, calc(5 * var(--uw)), 80px);
+    align-self: center;
+  }
+  /* ITEM8: s11 quote on left side - override margin */
+  #s11 .quote-card-right {
+    margin-right: 0;
+    margin-left: clamp(40px, calc(5 * var(--uw)), 80px);
+  }
+  .qcr-text {
+    font-family: var(--font-body);
+    font-size: clamp(14px, calc(1.15 * var(--uw)), 17px);
+    font-style: normal;
+    font-weight: 400;
+    color: #E8EAED;
+    line-height: 1.55;
+    text-align: left;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .qcr-attr { display: flex; flex-direction: column; gap: 4px; padding-top: clamp(14px, calc(1.6 * var(--uh)), 22px); border-top: 1px solid rgba(196,125,106,0.35); }
+  .qcr-name { font-family: var(--font-head); font-weight: 700; font-size: clamp(12px, calc(1.0 * var(--uw)), 14px); letter-spacing: 0.22em; color: #FFFFFF; text-transform: uppercase; }
+  .qcr-title { font-family: var(--font-mono); font-weight: 500; font-size: clamp(11px, calc(0.9 * var(--uw)), 13px); letter-spacing: 0.18em; color: rgba(232,234,237,0.70); text-transform: uppercase; }
+  /* ITEM 2: s3 ONLY - reduce all font sizes by 9% (×0.91). s11 unchanged. */
+  #s3 .qcr-text { font-size: clamp(12.74px, calc(1.047 * var(--uw)), 15.47px); }
+  #s3 .qcr-name { font-size: clamp(10.92px, calc(0.91 * var(--uw)), 12.74px); }
+  #s3 .qcr-title { font-size: clamp(10.01px, calc(0.819 * var(--uw)), 11.83px); }
+  /* batch8 item3: bold + warmShift peach→terracotta gradient on quote text (s3 + s11) */
+  #s3 .qcr-text,
+  #s11 .qcr-text {
+    font-weight: 700;
+    background: linear-gradient(120deg, #FFE2C0, #C47D6A, #FFE2C0, #C47D6A);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: warmShift 18s ease infinite;
+    font-style: normal;
+  }
+  /* batch8 item7: lighten the default slide-bg::after for s9 so pink archways show through */
+  #s9 .slide-bg::after { background: linear-gradient(180deg, rgba(10,10,13,0.22) 0%, rgba(10,10,13,0.08) 38%, rgba(10,10,13,0.18) 100%) !important; }
+  /* batch9 fix1: override global mobile opacity so s9 pink-archways bg is visible at desktop opacity */
+  #s9 .slide-bg { opacity: 0.58 !important; filter: none !important; }
+  /* batch8 items 4/5/6: case-study new template - full-bleed bg + stacked images left + text right */
+  .cs-new-template {
+    justify-content: flex-start !important;
+  }
+  .cs-new-template .cs-bg-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.46;
+    filter: brightness(1.1);
+  }
+  /* batch9 fix2: cs-bg-layer bump done above; content already z-index:2 via .cs-new-template .slide-inner */
+  .cs-new-template .cs-dark-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(8,7,10,0.72) 0%, rgba(8,7,10,0.52) 40%, rgba(8,7,10,0.72) 100%),
+                linear-gradient(90deg, rgba(8,7,10,0.55) 0%, rgba(8,7,10,0.15) 52%, rgba(8,7,10,0.45) 100%);
+    pointer-events: none;
+  }
+  .cs-new-template .slide-inner {
+    position: relative;
+    z-index: 2;
+  }
+  /* New 2-col layout: stacked images left, text right */
+  .cs-new-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, calc(4 * var(--uw)), 64px);
+    align-items: start;
+    margin-top: clamp(20px, calc(2.6 * var(--uh)), 36px);
+  }
+  .cs-stacked-imgs {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, calc(1.4 * var(--uh)), 18px);
+  }
+  .cs-stacked-imgs img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border: 1px solid var(--line-soft);
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.50);
+  }
+  .cs-stacked-imgs img:first-child {
+    aspect-ratio: 4/3;
+  }
+  @media (max-width: 1024px) {
+    .cs-new-layout { grid-template-columns: 1fr; }
+  }
+  body.mobile-deck .cs-new-layout { grid-template-columns: 1fr !important; gap: 20px !important; }
+  body.mobile-deck .cs-stacked-imgs img { aspect-ratio: 16/9 !important; }
+  /* Mobile: full-width card below image */
+  body.mobile-deck #s3, body.mobile-deck #s11 { height: auto !important; min-height: 560px !important; }
+  body.mobile-deck .s3-inner, body.mobile-deck .s11-inner { flex-direction: column; justify-content: flex-start; align-items: stretch; height: 100%; min-height: 100%; flex: 1; }
+  body.mobile-deck .quote-card-right { width: 100%; max-width: 100%; margin: 0; padding: 24px 20px; box-sizing: border-box; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  body.mobile-deck .qcr-text { font-size: clamp(13px, 3.8vw, 16px); }
+  body.mobile-deck #s3 .mobile-inline-img, body.mobile-deck #s11 .mobile-inline-img { width: 100%; height: 260px; object-fit: cover; display: block; flex-shrink: 0; }
+  body.mobile-deck #s3 .slide-bg, body.mobile-deck #s11 .slide-bg { opacity: 0.12 !important; filter: blur(3px) brightness(0.55); }
+
+  /* ===== MOBILE ELEGANCE PASS - all rules scoped to body.mobile-deck or ≤900px ===== */
+
+  /* --- Mobile-only inline image to break up text-heavy slides (Theresa 2026-06-30) --- */
+  .mobile-inline-img { display: none; }
+  body.mobile-deck .mobile-inline-img {
+    display: block;
+    width: 100%;
+    height: clamp(150px, 34vw, 220px);
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 0 22px;
+    border: 1px solid var(--line-soft);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+  }
+  /* BATCH32 2026-07-09: s5 + s6 mobile inline images — min height 150px -> 187px (mobile only) */
+  body.mobile-deck #s5 .mobile-inline-img,
+  body.mobile-deck #s6 .mobile-inline-img { height: clamp(187px, 34vw, 220px) !important; }
+  /* s1: stack inline image full-width above the text card on mobile; calm the bg photo */
+  body.mobile-deck #s1 .slide-inner {
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  body.mobile-deck #s1 .s1-card { max-width: 100% !important; }
+  body.mobile-deck #s1 .slide-bg { opacity: 0.12 !important; filter: blur(3px) brightness(0.55); }
+  /* s11 quote slide: stack image above the quote card on mobile */
+  body.mobile-deck #s11 .s11-inner {
+    flex-direction: column !important;
+    min-height: 0 !important;
+    justify-content: flex-start !important;
+  }
+  body.mobile-deck #s11 .mobile-inline-img { margin-bottom: 22px; }
+  /* calm the busy background behind text on image-added mobile slides so the inline image is the focal photo */
+  /* s5 redesign 2026-07-06: bg IS the hero — keep it visible, directional scrim handles legibility */
+  body.mobile-deck #s8 .slide-bg,
+  body.mobile-deck #s13 .slide-bg { opacity: 0.12 !important; filter: blur(3px) brightness(0.55); }
+  /* s5 mobile: keep bg visible but well-controlled behind text */
+  body.mobile-deck #s5 .slide-bg { opacity: 1 !important; filter: brightness(0.62) saturate(1.1) !important; }
+  /* s5 mobile: show heavy overlay so bg doesn't wash out text */
+  body.mobile-deck #s5 .s5-mobile-overlay { display: block !important; }
+
+  /* --- General overflow guard --- */
+  body.mobile-deck .slide-inner {
+    max-width: 100% !important;
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  /* mobile headline: cap size + force wrap across the WHOLE mobile band (not just <=480) so it never clips */
+  body.mobile-deck h2.display { font-size: clamp(28px, 7.4vw, 44px) !important; line-height: 1.08; overflow-wrap: break-word; }
+  body.mobile-deck .lede { font-size: clamp(17px, 4.4vw, 20px) !important; }
+  body.mobile-deck p { font-size: clamp(16px, 4.2vw, 18px) !important; }
+  /* keep decorative orbs from ever pushing layout width on mobile */
+  body.mobile-deck .orbs { overflow: hidden !important; }
+  body.mobile-deck .orb { max-width: 60vw; }
+  /* hard stop any accidental horizontal scroll on mobile */
+  body.mobile-deck { overflow-x: hidden; }
+  body.mobile-deck .slide { overflow-x: hidden; }
+
+  /* Cover + full-bleed mockup slides on mobile: match the image aspect so there's NO letterbox gap.
+     These are finished mockups (background-size:contain) - a portrait min-height left huge dead space. */
+  body.mobile-deck #cover.slide,
+  body.mobile-deck section.slide:has(> .slide-bg.mockup-bg) {
+    min-height: auto !important;
+    aspect-ratio: 16 / 9;
+    padding: 0 !important;
+  }
+  body.mobile-deck .slide-bg.mockup-bg { background-size: contain; background-position: center; }
+
+  /* --- S2: Horizontal overflow fixes --- */
+  /* Force the s2-grid to single column (belt + suspenders over inline style) */
+  body.mobile-deck .s2-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  /* Every child of s2-grid must stay within viewport width */
+  body.mobile-deck .s2-grid > * {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  /* s2 text row: stack on mobile */
+  body.mobile-deck .s2-text-row {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  @media (max-width: 900px) {
+    .s2-text-row { grid-template-columns: 1fr !important; gap: 16px !important; }
+  }
+  /* stat-big: scale down so $139B fits comfortably */
+  body.mobile-deck .stat-big {
+    font-size: clamp(48px, 16vw, 72px) !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  /* source line under the stat - allow wrap */
+  body.mobile-deck .s2-source {
+    white-space: normal !important;
+    overflow-wrap: break-word;
+  }
+
+  /* s5 redesign 2026-07-06: no grid layout — flex column, editorial rows */
+
+  /* --- S8, S9, S10: inline 2-col grids with big-num + panel --- */
+  body.mobile-deck #s8 .slide-inner > div[style*="grid-template-columns"],
+  body.mobile-deck #s9 .slide-inner > div[style*="grid-template-columns"],
+  body.mobile-deck #s10 .slide-inner > div[style*="grid-template-columns"] {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  /* big-num scale on mobile */
+  body.mobile-deck .big-num {
+    font-size: clamp(72px, 20vw, 110px) !important;
+    line-height: 1.0 !important;
+    overflow: visible !important;
+    padding-bottom: 0.06em !important;
+  }
+
+  /* --- S6, S7: inline grids --- */
+  body.mobile-deck .s6-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  /* s6 on mobile: full width slide-inner (bg panel collapses) */
+  body.mobile-deck #s6 .slide-inner {
+    max-width: 100% !important;
+  }
+  body.mobile-deck #s6 .split-img-panel {
+    display: none !important;
+  }
+  /* ITEM 10: s6 title-right mobile (s5 now uses new redesign) */
+  body.mobile-deck #s6 .s6-title-right {
+    position: static !important;
+    width: 100% !important;
+    display: block !important;
+    padding: 0 !important;
+    margin-bottom: 22px !important;
+  }
+  body.mobile-deck #s6 .s6-title-right h2 {
+    font-size: clamp(26px, 7.5vw, 32px) !important;
+    line-height: 1.05 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  /* S5 REDESIGN 2026-07-06: mobile rules for new editorial layout */
+  body.mobile-deck #s5 {
+    overflow-x: hidden !important;
+  }
+  body.mobile-deck #s5 .s5-redesign-inner {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    /* On mobile: tighter vertical padding, column layout still works */
+    padding: clamp(52px,14vw,70px) 0 clamp(28px,7vw,44px) !important;
+  }
+  /* batch4: override the top/bottom wrapper div padding on mobile so elements use their own padding rules */
+  body.mobile-deck #s5 .s5-redesign-inner > div {
+    padding-left: clamp(20px, 5.5vw, 32px) !important;
+    padding-right: clamp(20px, 5.5vw, 32px) !important;
+    box-sizing: border-box !important;
+  }
+  body.mobile-deck #s5 .s5-head-col,
+  body.mobile-deck #s5 .s5-editorial,
+  body.mobile-deck #s5 .s5-tagline-free {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+  /* s5 rework 2026-07-07: two desktop columns stack to one on mobile (left content, then right stack) */
+  body.mobile-deck #s5 .s5-cols {
+    flex-direction: column !important;
+    gap: 26px !important;
+  }
+  body.mobile-deck #s5 .s5-left,
+  body.mobile-deck #s5 .s5-right {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  body.mobile-deck #s5 .s5-tagline-free {
+    text-align: center !important;
+    margin-top: 22px !important;
+  }
+  body.mobile-deck #s5 .s5-head-col h2.display {
+    font-size: clamp(24px, 7vw, 30px) !important;
+    line-height: 1.08 !important;
+    word-break: break-word !important;
+  }
+  body.mobile-deck #s5 .s5-head-col p {
+    font-size: clamp(12px, 3.5vw, 15px) !important;
+    letter-spacing: 0.08em !important;
+    max-width: 100% !important;
+  }
+  body.mobile-deck #s5 .s5-editorial {
+    margin-top: clamp(16px, 4vw, 22px) !important;
+  }
+  body.mobile-deck #s5 .s5-why-row {
+    padding: clamp(8px, 2.5vw, 14px) 0 !important;
+  }
+  /* batch4: why-cards stack vertically on mobile */
+  /* BATCH18 2026-07-09: BATCH14 made .s5-why-cards inline flex row; force column stack + full-width cards on mobile */
+  body.mobile-deck #s5 .s5-why-head { padding-left: 0 !important; } /* BATCH26 2026-07-09 */
+  body.mobile-deck #s5 .s5-why-head { transform: none !important; } body.mobile-deck #s5 .s5-why-cards { transform: none !important; } /* BATCH31b 2026-07-09: cancel desktop -14px lift */
+  body.mobile-deck #s5 .s5-why-cards {
+    margin: 0 !important; /* BATCH19 2026-07-09: cancel desktop inline margin on mobile */
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  body.mobile-deck #s5 .s5-why-card {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+  }
+  body.mobile-deck #s5 .s5-why-card {
+    /* BATCH7: cards are bordered boxes now - keep side padding on mobile */
+    padding: 14px 16px !important;
+  }
+  body.mobile-deck #s5 .s5-deliver {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: clamp(12px, 3.5vw, 20px) !important;
+    box-sizing: border-box !important;
+  }
+  body.mobile-deck #s5 .s5-tagline-free {
+    margin-top: clamp(14px, 4vw, 22px) !important;
+  }
+  /* On mobile, show the inline bg image above content for context (people visible) */
+  body.mobile-deck #s5 .slide-bg {
+    background-position: 50% 30% !important;
+  }
+  /* ITEM5: desktop shows the <br> before "Real business"; mobile hides it */
+  body:not(.mobile-deck) .s5-desktop-br { display: block; }
+  body.mobile-deck .s5-desktop-br { display: none !important; }
+  /* s6 mobile: two-col grid stacks to single col */
+  body.mobile-deck #s6 .slide-inner > div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  /* ITEM 7 FIX (resume 2026-07-06): s6 fully grows on mobile - both cards visible, no clip */
+  body.mobile-deck #s6 {
+    overflow: visible !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  body.mobile-deck #s6 .slide-inner {
+    min-height: 0 !important;
+    flex: none !important;
+    padding-top: 36px !important;
+    padding-bottom: 32px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  /* Remove flex spacer divs that push content out of viewport */
+  body.mobile-deck #s6 .slide-inner > div[style*="flex:1"] {
+    display: none !important;
+  }
+  /* Also fix any other slide where stacked mobile content could clip */
+  body.mobile-deck .slide {
+    overflow: visible !important;
+  }
+  body.mobile-deck #s7 .s7-split-wrap {
+    flex-direction: column !important;
+  }
+
+  /* --- S3, S11: quote slides - comfortable padding, no overflow --- */
+  body.mobile-deck .quote-wrap {
+    max-width: 100% !important;
+    padding: 24px 20px !important;
+    box-sizing: border-box;
+  }
+  body.mobile-deck .s11-inner {
+    min-height: auto !important;
+  }
+
+  /* --- S4: logo grid comfortable sizing on mobile --- */
+  body.mobile-deck .logo-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+  }
+  body.mobile-deck .logo-tile {
+    padding: 12px 10px !important;
+  }
+  body.mobile-deck .mixology-band {
+    height: 80px !important;
+    margin-top: 16px !important;
+  }
+
+  /* --- S12: The Lab lab-split stacks, renders fit phone width --- */
+  body.mobile-deck .lab-split {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  body.mobile-deck .lab-render-img {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  body.mobile-deck .lab-center {
+    order: -1; /* show renders first */
+  }
+  body.mobile-deck .lab-sys p,
+  body.mobile-deck .lab-sys h4 {
+    font-size: 15px !important; /* at or above floor for body */
+  }
+  /* Ensure lab-sys paragraph stays ≥16px floor */
+  body.mobile-deck .lab-sys p {
+    font-size: 16px !important;
+  }
+  /* S12 new layout: stack on mobile */
+  body.mobile-deck #s12 .slide-inner > div[style*="grid-template-columns:1fr auto"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  body.mobile-deck #s12 .slide-inner > div[style*="grid-template-columns:repeat(3"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* --- S13: engage-grid --- */
+  body.mobile-deck .engage-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* --- S14 contact: flex wrap already set, ensure cards don't overflow --- */
+  body.mobile-deck .contact-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 20px !important;
+  }
+
+  /* --- CS slides: stacked cleanly --- */
+  body.mobile-deck .cs-layout {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  body.mobile-deck .cs-results {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* --- Panel cards: overflow guard --- */
+  body.mobile-deck .panel-card {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    padding: 20px 18px !important;
+  }
+
+  /* --- Engage cards: comfortable on mobile --- */
+  body.mobile-deck .engage-card {
+    padding: 22px 20px !important;
+  }
+
+  /* --- Slide-inner consistent spacing --- */
+  body.mobile-deck .slide { padding: 52px 20px !important; }
+  body.mobile-deck #s15 .slide-inner > div { width: 100%; }
+
+  /* --- Delivery bar: wrap cleanly --- */
+  body.mobile-deck .delivery-bar {
+    gap: 10px 16px;
+    margin-top: 24px;
+  }
+  body.mobile-deck .delivery-bar.delivery-hero .db-item {
+    font-size: clamp(18px, 5.5vw, 28px) !important;
+  }
+
+  /* --- Subhead text: allow wrap --- */
+  body.mobile-deck .subhead {
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  /* --- Eyebrow: allow wrap on very narrow --- */
+  body.mobile-deck .eyebrow {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  /* ===== END MOBILE ELEGANCE PASS ===== */
+
+  /* ===== S2 - CLIENT MOCKUP v3: headline top-left, hero-panel card, two-col bottom w/ divider ===== */
+  #s2 {
+    /* s2-showroom-girl.webp: showroom girl bg (Theresa batch D) */
+    background-image: url('assets/s2-showroom-girl.webp');
+    background-size: cover;
+    background-position: center 5%;
+    background-repeat: no-repeat;
+    padding: clamp(40px, calc(5 * var(--uh)), 72px) clamp(48px, calc(6 * var(--uw)), 110px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 810px;
+  }
+  /* Smooth left→right dissolve: left-half EXTRA dark for text contrast (Theresa batch6) */
+  #s2 .s2-bg-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+      /* BATCH8 item2: LIGHTENED left overlay so the dressing-room/store image reads through,
+         text kept legible via softer but still-present left band */
+      linear-gradient(90deg,
+        rgba(4,3,8,0.44) 0%,
+        rgba(4,3,8,0.34) 28%,
+        rgba(4,3,8,0.10) 50%,
+        transparent 62%
+      ),
+      linear-gradient(90deg,
+        rgba(20,20,28,0.66) 0%,
+        rgba(20,20,28,0.58) 15%,
+        rgba(20,20,28,0.44) 30%,
+        rgba(20,20,28,0.22) 45%,
+        rgba(20,20,28,0.08) 55%,
+        transparent 62%
+      );
+    pointer-events: none;
+  }
+  /* ── TOP: headline only (kicker removed) ── */
+  #s2 .s2-e-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 860px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* ITEM 9: evenly distributes title / stat-box / bottom text */
+    flex: 1 1 0;
+    min-height: 0;
+    height: 100%;
+    align-self: stretch;
+    box-sizing: border-box;
+    padding-bottom: clamp(24px, calc(3 * var(--uh)), 40px);
+    padding-top: clamp(16px, calc(3 * var(--uh)), 36px); /* ITEM 9: increased top padding - pushes title slightly down */
+  }
+  #s2 .s2-e-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  #s2 .s2-e-kicker {
+    display: none; /* removed per client */
+  }
+  #s2 .s2-e-headline {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: clamp(30px, calc(3.1 * var(--uw)), 46px); /* ITEM 9: increased from clamp(25px,2.5vw,37.5px) */
+    line-height: 1.1;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    /* BATCH37 2026-07-09: match slide-6 header color (warm peach->copper animated gradient, was lavender #D9DBF4->#7F83A7) */
+    background: linear-gradient(120deg, #FFE2C0, #C47D6A, #FFE2C0, #C47D6A);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: warmShift 18s ease infinite;
+    text-shadow: none;
+    margin: 0;
+  }
+  /* ── MIDDLE: hero panel card ── */
+  /* ITEM 9: removed explicit margin-bottom so space-between distributes the 3 blocks evenly */
+  #s2 .s2-e-top { margin-bottom: 0; }
+  #s2 .s2-e-hero {
+    margin: 0;
+    background: linear-gradient(160deg, rgba(217,219,244,0.06), rgba(8,7,10,0.62));
+    backdrop-filter: blur(8px); /* THERESA 2026-07-16: reduced from 14px */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(217,219,244,0.22);
+    border-radius: 0;
+    padding: clamp(18px, calc(2.2 * var(--uh)), 32px) clamp(20px, calc(2.2 * var(--uw)), 36px);
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: clamp(24px, calc(3 * var(--uw)), 44px);
+    align-items: center;
+    width: 100%;
+  }
+  /* Left col: big number + label */
+  #s2 .s2-e-stat-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  #s2 .s2-e-stat {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: clamp(72px, calc(8.4 * var(--uw)), 118px);
+    line-height: 0.88;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    background: linear-gradient(135deg, #FFE2C0 0%, #C47D6A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    overflow: visible;
+    display: block;
+  }
+  #s2 .s2-e-stat-label {
+    font: 600 clamp(7.8px, calc(0.96 * var(--uw)), 13.2px) var(--font-mono);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #FFE2C0;
+    line-height: 1.35;
+    max-width: none;
+    white-space: nowrap;
+  }
+  /* Right col: paragraph + citation */
+  #s2 .s2-e-stat-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: clamp(4px, calc(0.5 * var(--uh)), 10px);
+    min-width: 0;
+    flex: 1 1 auto;
+    align-self: stretch;
+    justify-content: flex-end;
+    max-width: 92%; /* batch10: widened to pull orphan up to 3 lines */
+  }
+  #s2 .s2-e-stat-body {
+    font-size: clamp(15px, calc(1.12 * var(--uw)), 17px);
+    line-height: 1.5;
+    color: #C47D6A;
+    margin: 0;
+    /* ITEM2: force ~2-line wrap */
+    max-width: 46em;
+  }
+  #s2 .s2-e-stat-cite {
+    font-size: clamp(12px, calc(0.92 * var(--uw)), 14px);
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--muted);
+    margin: 0;
+    opacity: 0.75;
+  }
+  /* batch8 item1a: keep citation on one line - reduce font and allow stat-copy to expand */
+  /* batch8 item1a desktop: one-line citation via smaller font + nowrap */
+  #s2 .s2-e-stat-cite {
+    font-size: clamp(10px, calc(0.76 * var(--uw)), 11.5px);
+    white-space: nowrap;
+    overflow: visible;
+  }
+  /* batch8 item1b: desktop: narrow the box width to hug content (less wide than before) */
+  body:not(.mobile-deck) #s2 .s2-e-hero {
+    max-width: 760px;
+  }
+  /* batch8 item2: 15% fainter bg via additional dark overlay */
+  #s2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(10,10,13,0.07); /* THERESA 2026-07-16: lightened from 0.15 so photo/clothing reads through */
+    pointer-events: none;
+  }
+  /* ── BOTTOM: two columns with thin vertical divider ── */
+  #s2 .s2-e-bottom {
+    display: grid;
+    /* THERESA 2026-07-16: divider hugs col1, col2 pulled left off the woman in the bg photo */
+    grid-template-columns: minmax(0, 21em) 1px minmax(0, 22.5em);
+    justify-content: start;
+    gap: 0 clamp(18px, calc(2.0 * var(--uw)), 30px);
+    padding-top: clamp(16px, calc(2 * var(--uh)), 26px);
+    border-top: 1px solid rgba(217,219,244,0.18);
+    align-items: start;
+  }
+  #s2 .s2-e-divider {
+    width: 1px;
+    background: rgba(217,219,244,0.18);
+    align-self: stretch;
+    margin: 0;
+  }
+  #s2 .s2-e-point {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  #s2 .s2-e-point-title {
+    font: 700 clamp(20px, calc(1.65 * var(--uw)), 24px) var(--font-mono);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--peach);
+    line-height: 1.3;
+  }
+  #s2 .s2-e-point-body {
+    font-size: clamp(16px, calc(1.2 * var(--uw)), 18px);
+    line-height: 1.55;
+    color: var(--body);
+    margin: 0;
+    text-wrap: pretty; /* THERESA 2026-07-16: avoid single-word orphan lines */
+  }
+  /* S2 desktop: constrain point-body width so text clears the model/figure on right side of image */
+  /* batch4: narrowed further so copy wraps sooner and clears the bg figure cleanly */
+  body:not(.mobile-deck) #s2 .s2-e-point {
+    max-width: 22em;
+  }
+  /* batch4: also cap point-body itself for tighter wrap on wide viewports */
+  body:not(.mobile-deck) #s2 .s2-e-point-body {
+    max-width: 20em;
+  }
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    #s2 .s2-e-point { max-width: 20em; }
+    #s2 .s2-e-point-body { max-width: 18em; }
+  }
+  /* ── MOBILE ── */
+  body.mobile-deck #s2 {
+    background-image: url('assets/s2-showroom-girl.webp') !important;
+    background-size: cover !important;
+    background-position: center 5% !important;
+  }
+  body.mobile-deck #s2 .s2-bg-scrim {
+    background: linear-gradient(90deg,
+      rgba(8,7,10,0.97) 0%,
+      rgba(8,7,10,0.97) 40%,
+      rgba(8,7,10,0.88) 65%,
+      rgba(8,7,10,0.65) 100%
+    ) !important;
+  }
+  body.mobile-deck #s2 .s2-e-inner {
+    max-width: 100% !important;
+    min-height: auto !important;
+    justify-content: flex-start !important;
+    gap: 20px;
+  }
+  body.mobile-deck #s2 .s2-e-hero {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  body.mobile-deck #s2 .s2-e-stat {
+    font-size: clamp(72px, 18vw, 120px) !important;
+  }
+  body.mobile-deck #s2 .s2-e-stat-label {
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+  body.mobile-deck #s2 .s2-e-bottom {
+    grid-template-columns: 1fr !important;
+    gap: 18px 0 !important;
+    margin-top: 16px !important;
+  }
+  body.mobile-deck #s2 .s2-e-divider { display: none !important; }
+  /* batch8 item1a mobile: allow citation to wrap on mobile, restore stat-copy mobile max-width */
+  body.mobile-deck #s2 .s2-e-stat-cite { white-space: normal !important; }
+  @media (max-width: 900px) {
+    #s2 .s2-e-hero { grid-template-columns: 1fr !important; }
+    #s2 .s2-e-stat { font-size: clamp(72px, 18vw, 120px) !important; }
+    #s2 .s2-e-stat-label { max-width: 100% !important; }
+    #s2 .s2-e-bottom { grid-template-columns: 1fr !important; gap: 18px 0 !important; }
+    #s2 .s2-e-divider { display: none !important; }
+    #s2 .s2-e-inner { min-height: auto !important; flex: none; }
+  }
+  /* ===== END S2 CLIENT MOCKUP v3 ===== */
+</style>
+<style>
+  /* ===== S5 REDESIGN 2026-07-06: clean editorial layout (panel-card removed) ===== */
+  /* D2/D3 overrides no longer needed — s5 uses editorial rows, not panel-card boxes */
+  /* s5 tagline fix 2026-07-06: overflow:visible so tagline is never clipped */
+  /* S5: zero out default .slide padding; inner div manages its own spacing */
+  #s5 { overflow: visible !important; padding-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; }
+  #s5 .s5-redesign-inner {
+    position: relative;
+    z-index: 3;
+  }
+  #s5 .s5-editorial .s5-why-row {
+    transition: border-color 0.2s;
+  }
+  /* Gold dotted rail remains (brand cue) */
+  #s5 .slide-bg {
+    background-position: 50% 35% !important;
+  }
+  /* ===== END S5 REDESIGN ===== */
+</style>
+<style>
+  /* ===== MOBILE BATCH 2026-07-02 (7 items) ===== */
+
+  /* ITEM 1: s2 mobile - allow height to grow so ALL text fits; remove overflow clip; add breathing room */
+  body.mobile-deck #s2 {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding: 48px 20px !important;
+  }
+  body.mobile-deck #s2 .s2-e-inner {
+    justify-content: flex-start !important;
+    height: auto !important;
+    min-height: 0 !important;
+    flex: none !important;
+    gap: 22px !important;
+    padding-top: 12px !important;
+    padding-bottom: 16px !important;
+  }
+  body.mobile-deck #s2 .s2-e-bottom {
+    margin-top: 0 !important;
+  }
+  @media (max-width: 900px) {
+    #s2 {
+      height: auto !important;
+      min-height: 0 !important;
+      overflow: visible !important;
+    }
+    #s2 .s2-e-inner {
+      height: auto !important;
+      flex: none !important;
+    }
+  }
+
+  /* ITEM 2: hide corner brackets on mobile */
+  body.mobile-deck .br { display: none !important; }
+  @media (max-width: 900px) { .br { display: none !important; } }
+
+  /* ITEM 3: square corners on mobile inline images */
+  body.mobile-deck .mobile-inline-img {
+    border-radius: 0 !important;
+  }
+  @media (max-width: 900px) {
+    .mobile-inline-img { border-radius: 0 !important; }
+  }
+
+  /* ITEM 4: s15 - hide the top inline image on mobile, keep slide-bg, tighten spacing */
+  body.mobile-deck #s15 .mobile-inline-img { display: none !important; }
+  body.mobile-deck #s15 .slide-inner {
+    padding-top: 0 !important;
+    justify-content: center !important;
+  }
+  body.mobile-deck #s15 .slide-bg {
+    opacity: 0.32 !important;
+    filter: none !important;
+  }
+  @media (max-width: 900px) {
+    #s15 .mobile-inline-img { display: none !important; }
+  }
+
+  /* ITEM 5: s10 - remove top inline image on mobile, show bg at s9's opacity (0.58) */
+  /* BATCH10 item2 2026-07-08: s8 mobile now SHOWS the inline gown/lightburst image as the hero; bg dimmed behind text */
+  body.mobile-deck #s10 .mobile-inline-img { display: none !important; }
+  body.mobile-deck #s8 .mobile-inline-img {
+    display: block !important;
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover !important;
+    object-position: center 42% !important;
+    margin-bottom: 20px !important;
+    border-radius: 0 !important;
+  }
+  body.mobile-deck #s8 .s8-b10-col { max-width: 100% !important; }
+  body.mobile-deck #s10 .slide-bg {
+    opacity: 0.58 !important;
+    filter: none !important;
+  }
+  @media (max-width: 900px) {
+    #s10 .mobile-inline-img { display: none !important; }
+    #s8 .mobile-inline-img { display: block !important; width: 100% !important; height: 300px !important; object-fit: cover !important; object-position: center 42% !important; margin-bottom: 20px !important; border-radius: 0 !important; }
+    #s8 .s8-b10-col { max-width: 100% !important; }
+    #s8 .slide-bg { opacity: 0.14 !important; filter: blur(3px) brightness(0.55) !important; }
+    #s10 .slide-bg { opacity: 0.58 !important; filter: none !important; }
+  }
+
+  /* ITEM 6: raise too-low 0.12 background opacities to ~0.35 on mobile; lighten heavy blur/brightness */
+  /* Affected: s1, s3, s5, s8 (already handled by item5), s11, s13 */
+  body.mobile-deck #s1 .slide-bg {
+    opacity: 0.35 !important;
+    filter: blur(1px) brightness(0.80) !important;
+  }
+  body.mobile-deck #s3 .slide-bg {
+    opacity: 0.35 !important;
+    filter: blur(1px) brightness(0.80) !important;
+  }
+  /* s5 redesign 2026-07-06: people are the hero — keep bg at full opacity */
+  body.mobile-deck #s11 .slide-bg {
+    opacity: 0.35 !important;
+    filter: blur(1px) brightness(0.80) !important;
+  }
+  body.mobile-deck #s13 .slide-bg {
+    opacity: 0.35 !important;
+    filter: blur(1px) brightness(0.80) !important;
+  }
+  /* Add directional scrim behind text on s1, s3, s5, s11, s13 to keep text legible with lifted bg */
+  body.mobile-deck #s1 .s1-card {
+    background: rgba(6,5,10,0.72) !important;
+  }
+  body.mobile-deck #s3 .quote-card-right,
+  body.mobile-deck #s11 .quote-card-right {
+    background: rgba(6,5,10,0.82) !important;
+  }
+  /* s5 redesign 2026-07-06: no panel-card; mobile bg is the brightened image, scrim handles legibility */
+  body.mobile-deck #s13 .engage-card {
+    background: rgba(6,5,10,0.86) !important;
+  }
+  @media (max-width: 900px) {
+    #s1 .slide-bg  { opacity: 0.35 !important; filter: blur(1px) brightness(0.80) !important; }
+    #s3 .slide-bg  { opacity: 0.35 !important; filter: blur(1px) brightness(0.80) !important; }
+    /* s5 batch4: bg visible, people clearly lit; why-cards stack on mobile */
+    #s5 .s5-why-head { padding-left: 0 !important; } /* BATCH26 2026-07-09 */ #s5 .s5-why-head { transform: none !important; } #s5 .s5-why-cards { transform: none !important; } /* BATCH31b 2026-07-09: cancel desktop -14px lift */
+    #s5 .s5-why-cards { margin: 0 !important; grid-template-columns: 1fr !important; flex-direction: column !important; gap: 12px !important; } /* BATCH18 2026-07-09, BATCH19 margin:0 */
+    #s5 .s5-why-card { flex: 1 1 100% !important; width: 100% !important; } /* BATCH18 2026-07-09 */
+    #s5 .slide-bg  { opacity: 1 !important; filter: brightness(0.65) saturate(1.1) !important; }
+    #s5 .s5-mobile-overlay { display: block !important; }
+    #s11 .slide-bg { opacity: 0.35 !important; filter: blur(1px) brightness(0.80) !important; }
+    #s13 .slide-bg { opacity: 0.35 !important; filter: blur(1px) brightness(0.80) !important; }
+  }
+
+  /* ITEM 7: The Lab (s11) - center the aerial cutout (mobile-inline-img) on mobile */
+  body.mobile-deck #s11 .s11-inner {
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+  body.mobile-deck #s11 .mobile-inline-img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  @media (max-width: 900px) {
+    #s11 .s11-inner { align-items: center !important; }
+    #s11 .mobile-inline-img { margin-left: auto !important; margin-right: auto !important; }
+  }
+  /* ===== END MOBILE BATCH 2026-07-02 ===== */
+
+  /* ITEM 7 (2026-07-02): center The Lab (s12) aerial cutaway on mobile */
+  body.mobile-deck #s12 .s12-cutaway-wrap { width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
+
+  /* BATCH-D item6: CASE STUDY kicker positioned upper-right on all cs-new-template slides */
+  .cs-new-template .cs-kicker-corner {
+    position: absolute;
+    top: calc(var(--inset) + 4px);
+    right: calc(var(--inset) + 78px);
+    z-index: 6;
+    font: 500 13px/1 var(--font-mono);
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
+    color: var(--copper);
+    white-space: nowrap;
+  }
+  /* hide in-flow cs-kicker on cs-new-template (replaced by corner) */
+  .cs-new-template .cs-kicker { display: none !important; }
+  /* mobile: hide corner kicker too (small screens - keep counter only) */
+  @media (max-width: 900px) { .cs-kicker-corner { display: none !important; } }
+  body.mobile-deck .cs-kicker-corner { display: none !important; }
+
+  /* ===== S12 THE LAB - MOBILE REDESIGN (2026-07-02) =====
+   * Goal: scannable tiled capability grid - NOT a paragraph wall.
+   * Layout:
+   *   1. Eyebrow + "The Lab" title stacked, tightened
+   *   2. Intro paragraph: kept but reduced to secondary role
+   *   3. Aerial image: full-width banner ~200px, object-fit cover, copper border
+   *   4. Six capability tiles: 2-column grid (left-col | right-col) of compact styled cards
+   * Desktop 3-col layout UNCHANGED (all rules scoped to body.mobile-deck)
+   */
+
+  /* ── Reduce extra padding-top on title wrapper (counter already cleared by slide padding) ── */
+  body.mobile-deck #s12 .slide-inner > div[style*="padding-top:clamp"] {
+    padding-top: 8px !important;
+  }
+  /* ── Title row: stack "The Lab" + paragraph vertically (collapse auto 1fr grid) ── */
+  body.mobile-deck #s12 .slide-inner > div > div[style*="grid-template-columns:auto 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: flex-start !important;
+  }
+  body.mobile-deck #s12 h2.display {
+    font-size: clamp(40px, 11vw, 56px) !important;
+    white-space: nowrap !important;
+    margin-bottom: 0 !important;
+  }
+  body.mobile-deck #s12 .slide-inner > div > div[style*="grid-template-columns:auto 1fr"] > p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    max-width: 100% !important;
+    color: var(--muted) !important;
+    margin: 0 !important;
+  }
+
+  /* ── Main layout: 2-col grid with image banner spanning full width at top ── */
+  body.mobile-deck #s12 .s12-lab-main {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto 1fr !important;
+    gap: 12px 10px !important;
+    margin-top: 14px !important;
+  }
+  /* Image column (center/2nd child): pin to row 1, span both columns */
+  body.mobile-deck #s12 .s12-lab-main > div:nth-child(2) {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+    height: 200px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(196,125,106,0.40) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  body.mobile-deck #s12 .s12-lab-main > div:nth-child(2) img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 35% !important;
+    filter: none !important;
+    display: block !important;
+  }
+  /* ITEM 1 (2026-07-06): mobile-deck swaps to horizontal aerial via CSS content override.
+     The picture element handles the @media path; this handles body.mobile-deck JS path. */
+  body.mobile-deck #s12 .s12-lab-main > div:nth-child(2) picture source {
+    /* JS-applied mobile-deck: force picture to pick the mobile source */
+  }
+  /* Use JS to swap src on mobile-deck init (handled inline below) */
+  /* Left card column (1st child): col 1, row 2, flex column */
+  body.mobile-deck #s12 .s12-lab-main > div:nth-child(1) {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  /* Right card column (3rd child): col 2, row 2, flex column */
+  body.mobile-deck #s12 .s12-lab-main > div:nth-child(3) {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  /* ── Individual capability tiles: designed cards, not bare bordered boxes ── */
+  body.mobile-deck #s12 .lab-sys {
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(196,125,106,0.22) !important;
+    border-left: 2px solid var(--copper) !important;
+    border-radius: 12px !important;
+    padding: 12px 12px 12px 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    min-width: 0 !important;
+    flex: 1 !important;
+  }
+  body.mobile-deck #s12 .lab-sys h4 {
+    font-size: 12px !important;
+    letter-spacing: 0.07em !important;
+    color: var(--peach) !important;
+    margin: 0 0 3px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+  }
+  body.mobile-deck #s12 .lab-sys p {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    color: var(--body) !important;
+    margin: 0 !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* ── Mirror for @media (no body.mobile-deck class) ── */
+  @media (max-width: 900px) {
+    #s12 .slide-inner > div > div[style*="grid-template-columns:auto 1fr"] {
+      display: flex !important; flex-direction: column !important; gap: 8px !important;
+    }
+    #s12 h2.display { font-size: clamp(40px, 11vw, 56px) !important; white-space: nowrap !important; }
+    #s12 .s12-lab-main {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      grid-template-rows: auto 1fr !important;
+      gap: 12px 10px !important;
+    }
+    #s12 .s12-lab-main > div:nth-child(2) {
+      grid-column: 1 / -1 !important; grid-row: 1 !important;
+      height: 200px !important; border-radius: 10px !important;
+      overflow: hidden !important; border: 1px solid rgba(196,125,106,0.40) !important;
+    }
+    #s12 .s12-lab-main > div:nth-child(2) img {
+      width: 100% !important; height: 100% !important;
+      object-fit: cover !important; object-position: center 35% !important; filter: none !important;
+    }
+    #s12 .s12-render-wrap img { height: auto !important; aspect-ratio: 1614 / 909; object-fit: cover !important; }
+    #s12 .s12-lab-main > div:nth-child(1) {
+      grid-column: 1 !important; grid-row: 2 !important;
+      display: flex !important; flex-direction: column !important; gap: 10px !important;
+    }
+    #s12 .s12-lab-main > div:nth-child(3) {
+      grid-column: 2 !important; grid-row: 2 !important;
+      display: flex !important; flex-direction: column !important; gap: 10px !important;
+    }
+    #s12 .lab-sys {
+      background: rgba(255,255,255,0.04) !important;
+      border: 1px solid rgba(196,125,106,0.22) !important;
+      border-left: 2px solid var(--copper) !important;
+      border-radius: 12px !important;
+      padding: 12px !important;
+      flex: 1 !important;
+    }
+    #s12 .lab-sys h4 { font-size: 12px !important; color: var(--peach) !important; }
+    #s12 .lab-sys p { font-size: 12px !important; }
+  }
+  /* ===== END S12 THE LAB MOBILE REDESIGN =====*/
+</style>
+<style>
+  /* ===== MOBILE BG VISIBILITY PASS - Theresa request 2026-07-02 ===== */
+
+  /* COVER: ensure bg image is fully visible on mobile; undo the 16:9 aspect lock that squishes it;
+     restore natural tall layout with adequate min-height */
+  body.mobile-deck #cover.slide {
+    aspect-ratio: unset !important;
+    min-height: 560px !important;
+    padding: 48px 24px !important;
+  }
+  body.mobile-deck #cover .slide-bg {
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  /* S1: raise the desktop background image to clearly visible; hide the redundant inline image;
+     keep the text card's existing dark scrim for legibility */
+  body.mobile-deck #s1 .slide-bg {
+    opacity: 0.70 !important;
+    filter: brightness(0.90) !important;
+  }
+  body.mobile-deck #s1 .mobile-inline-img { display: none !important; }
+
+  /* S2: lighten the heavy scrim so the showroom-girl background shows through.
+     Original mobile scrim was 97%/88%/65% (nearly opaque). Replace with a much lighter,
+     mostly-uniform overlay (~40%) so the retail/showroom image reads clearly across the
+     whole slide, and lean on per-element text-shadow + the dark stat card for legibility. */
+  body.mobile-deck #s2 .s2-bg-scrim {
+    background: linear-gradient(180deg,
+      rgba(8,7,10,0.52) 0%,
+      rgba(8,7,10,0.38) 45%,
+      rgba(8,7,10,0.30) 100%
+    ) !important;
+  }
+  /* Ensure text on s2 stays legible with lighter scrim - strong text-shadow on all copy */
+  body.mobile-deck #s2 .s2-e-headline,
+  body.mobile-deck #s2 .s2-e-stat,
+  body.mobile-deck #s2 .s2-e-stat-label,
+  body.mobile-deck #s2 .s2-e-point-title,
+  body.mobile-deck #s2 .s2-e-point-body,
+  body.mobile-deck #s2 .s2-e-stat-cite,
+  body.mobile-deck #s2 .s2-e-kicker {
+    text-shadow: 0 1px 4px rgba(0,0,0,1), 0 2px 12px rgba(0,0,0,0.95), 0 0 24px rgba(0,0,0,0.85) !important;
+  }
+  /* Give the $139B stat hero panel its own dark card so the big stat + citation stay readable
+     over the now-visible image */
+  body.mobile-deck #s2 .s2-e-hero {
+    background: rgba(6,5,10,0.68) !important;
+    border-radius: 10px !important;
+    padding: 20px 18px !important;
+  }
+
+  /* TASK 2 (2026-07-02): Reduce s2 supporting text (s2-e-point-body) on mobile - step down from ~18px to 16px */
+  body.mobile-deck #s2 .s2-e-point-body {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* S8: BATCH10 2026-07-08 — inline image is the mobile hero; keep bg soft/dim behind stacked text */
+  body.mobile-deck #s8 .slide-bg {
+    opacity: 0.14 !important;
+    filter: blur(3px) brightness(0.55) !important;
+  }
+  /* S8 text legibility: boost the panel-card background */
+  body.mobile-deck #s8 .panel-card {
+    background: rgba(6,5,10,0.82) !important;
+  }
+  body.mobile-deck #s8 h2.display,
+  body.mobile-deck #s8 .big-num,
+  body.mobile-deck #s8 .subhead {
+    text-shadow: 0 1px 8px rgba(0,0,0,0.80) !important;
+  }
+
+  /* S10: raise sneaker-holo-v2 bg from 0.58 to 0.72; no blur; full brightness */
+  body.mobile-deck #s10 .slide-bg {
+    opacity: 0.72 !important;
+    filter: brightness(0.95) !important;
+  }
+  /* S10 text legibility: boost the panel-card background */
+  body.mobile-deck #s10 .panel-card {
+    background: rgba(6,5,10,0.82) !important;
+  }
+  body.mobile-deck #s10 h2.display,
+  body.mobile-deck #s10 .big-num,
+  body.mobile-deck #s10 .subhead {
+    text-shadow: 0 1px 8px rgba(0,0,0,0.80) !important;
+  }
+  /* BATCH3: s10 caps strip — stack items vertically on mobile */
+  body.mobile-deck #s10 .s10-caps-items {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: clamp(8px, 2.2vw, 14px) !important;
+    align-items: flex-start !important;
+  }
+  body.mobile-deck #s10 .s10-cap-sep { display: none !important; }
+  /* BATCH3: s9 logo strip — allow wrapping on mobile */
+  body.mobile-deck #s9 .s9-logo-strip > div:last-child {
+    gap: 6px 10px !important;
+  }
+
+  @media (max-width: 900px) {
+    #cover .slide-bg { opacity: 1 !important; filter: none !important; }
+    #s1 .slide-bg    { opacity: 0.70 !important; filter: brightness(0.90) !important; }
+    #s8 .slide-bg    { opacity: 0.72 !important; filter: brightness(0.95) !important; }
+    #s10 .slide-bg   { opacity: 0.72 !important; filter: brightness(0.95) !important; }
+  }
+  /* ===== END MOBILE BG VISIBILITY PASS ===== */
+</style>
+<style>
+  /* ===== COVER + S1 MOBILE DARKFIX - 2026-07-02 ===== */
+
+  /* COVER: the ::after pseudo-element on .slide-bg adds a 60% black top wash.
+     Suppress it entirely on mobile so the cobblestone lane image shows fully. */
+  body.mobile-deck #cover .slide-bg::after {
+    display: none !important;
+  }
+  /* COVER: the inline aria-hidden div (z-index:1) is a separate dark gradient overlay.
+     Replace it with a very soft scrim - just enough for the wordmark to read, not a black wash. */
+  body.mobile-deck #cover > div[aria-hidden="true"]:not(.scanline) {
+    background: linear-gradient(180deg,
+      rgba(8,7,10,0.30) 0%,
+      rgba(8,7,10,0.10) 45%,
+      rgba(8,7,10,0.22) 100%
+    ) !important;
+  }
+  /* COVER: reposition background so the cobblestone lane texture fills the full slide,
+     not just the bottom third (portrait mobile with landscape source image) */
+  body.mobile-deck #cover .slide-bg {
+    background-position: center center !important;
+    background-size: cover !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  /* S1: same two culprits - kill the ::after wash, soften the inline overlay */
+  body.mobile-deck #s1 .slide-bg::after {
+    display: none !important;
+  }
+  /* S1: the inline overlay is a left→right gradient (mostly dark right side for desktop text);
+     on mobile the card is centered so we want a uniform very-soft scrim instead */
+  body.mobile-deck #s1 > div[aria-hidden="true"]:not(.scanline) {
+    background: rgba(8,7,10,0.18) !important;
+  }
+  /* S1: lift the background image to clearly visible, matching s8/s10 target */
+  body.mobile-deck #s1 .slide-bg {
+    opacity: 0.62 !important;
+    filter: none !important;
+  }
+  /* S1: ensure text card stays legible over the now-visible bg */
+  body.mobile-deck #s1 .s1-card {
+    background: rgba(6,5,10,0.72) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
+  body.mobile-deck #s1 h2.display,
+  body.mobile-deck #s1 .lede {
+    text-shadow: 0 1px 6px rgba(0,0,0,0.85) !important;
+  }
+
+  /* Mirror @media rule for non-body.mobile-deck narrow viewports */
+  @media (max-width: 900px) {
+    #cover .slide-bg::after { display: none !important; }
+    #cover > div[aria-hidden="true"]:not(.scanline) {
+      background: linear-gradient(180deg,
+        rgba(8,7,10,0.30) 0%,
+        rgba(8,7,10,0.10) 45%,
+        rgba(8,7,10,0.22) 100%
+      ) !important;
+    }
+    #cover .slide-bg { background-position: center center !important; opacity: 1 !important; filter: none !important; }
+    #s1 .slide-bg::after { display: none !important; }
+    #s1 > div[aria-hidden="true"]:not(.scanline) { background: rgba(8,7,10,0.18) !important; }
+    #s1 .slide-bg { opacity: 0.62 !important; filter: none !important; }
+  }
+  /* ===== END COVER + S1 MOBILE DARKFIX ===== */
+
+  /* ===== TASK A: MOBILE GRADIENT LEGIBILITY FIXES (2026-07-02) ===== */
+  /* Scope: body.mobile-deck only - desktop styles UNCHANGED */
+
+  /* 1. big-num ("01"/"03" numerals): replace dark-oxblood gradient (#C10644->#4C041D)
+        with bright crimson fill so numerals read on dark photo backgrounds. */
+  body.mobile-deck .big-num {
+    background: none !important;
+    -webkit-text-fill-color: #D91E52 !important;
+    color: #D91E52 !important;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.60) !important;
+  }
+
+  /* 2. .eyebrow and .label-mono: brighten from dark grad-05 (solid #C10644 w/ dark end)
+        to a bright legible hot-crimson so text reads on dark photo backgrounds.
+        Using #FF3B6B (hot pink-crimson) for maximum legibility at small mono size. */
+  body.mobile-deck .eyebrow {
+    background: none !important;
+    -webkit-text-fill-color: #FF3B6B !important;
+    color: #FF3B6B !important;
+    text-shadow: 0 0 8px rgba(255,59,107,0.35) !important;
+  }
+  body.mobile-deck .label-mono {
+    background: none !important;
+    -webkit-text-fill-color: #FF3B6B !important;
+    color: #FF3B6B !important;
+  }
+  /* Keep tick mark hot-crimson */
+  body.mobile-deck .eyebrow .tick {
+    -webkit-text-fill-color: #FF3B6B !important;
+    color: #FF3B6B !important;
+    background: none !important;
+  }
+
+  /* 3. .s2-e-headline ("EXPERIENTIAL MARKETING IS CHANGING. FAST."): use near-white
+        so it's clearly legible on any dark background. Keep lavender tint for brand feel. */
+  body.mobile-deck #s2 .s2-e-headline {
+    /* BATCH37 2026-07-09: match slide-6 header color on mobile too (was near-white #F0F2FF) */
+    background: linear-gradient(120deg, #FFE2C0, #C47D6A, #FFE2C0, #C47D6A) !important;
+    background-size: 300% 100% !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    animation: warmShift 18s ease infinite !important;
+    text-shadow: none !important;
+  }
+
+  /* 4. .stat-big and .s2-e-stat ("$139B"): keep peach->copper but add text-shadow
+        so the number pops on dark photo backgrounds; brighten copper end. */
+  body.mobile-deck .stat-big {
+    text-shadow: 0 2px 14px rgba(0,0,0,0.55) !important;
+  }
+  body.mobile-deck #s2 .s2-e-stat {
+    background: linear-gradient(120deg, #FFE2C0, #E0A088, #FFE2C0, #E0A088) !important;
+    background-size: 300% 100% !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    text-shadow: none !important;
+  }
+  /* ===== END TASK A ===== */
+
+  /* ===== TASK B: S1 + S2 MOBILE TOP-IMAGE OVERLAY (2026-07-02) ===== */
+  /* On mobile: layer the slide's bg image ON TOP of content via ::after pseudo-element
+     (.slide-inner is z-index:2, so this ::after sits at z-index:3 above it).
+     Low opacity + mix-blend-mode:overlay keeps text readable while adding
+     the textural image-over-content effect the client requested. */
+
+  body.mobile-deck #s1 {
+    position: relative;
+    overflow: hidden;
+  }
+  body.mobile-deck #s1::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background-image: url('assets/slide1-headphones-portals.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.18;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  /* TASK 1 (2026-07-02): De-ghost s1 hero title on mobile - raise above ::after overlay (z-index:3) */
+  body.mobile-deck #s1 h2.display {
+    position: relative;
+    z-index: 4;
+    background: linear-gradient(120deg, #FFEEDD, #FFD0A0, #FFEEDD, #FFD0A0) !important;
+    background-size: 300% 100% !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    text-shadow: none !important;
+    filter: drop-shadow(0 1px 8px rgba(0,0,0,0.75)) !important;
+  }
+
+  body.mobile-deck #s2 {
+    position: relative;
+    overflow: hidden;
+  }
+  body.mobile-deck #s2::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background-image: url('assets/s2-showroom-girl.webp');
+    background-size: cover;
+    background-position: center 5%;
+    background-repeat: no-repeat;
+    opacity: 0.18;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  /* ===== END TASK B ===== */
+
+  /* ===== TASK S2 MOBILE-PHOTO + COMPACT (2026-07-03) =====
+     Theresa: show girl photo as top inline banner + make text slightly more compact.
+     Body is already at 16px floor - keep it there; tighten line-height + reduce point-title + trim gaps.
+  */
+
+  /* 1. Switch s2 mobile background from photo to plain dark base (photo now comes from inline img) */
+  body.mobile-deck #s2 {
+    background-image: none !important;
+  }
+  /* Remove the ::after photo overlay on s2 (no longer needed - inline img carries the photo) */
+  body.mobile-deck #s2::after {
+    display: none !important;
+  }
+
+  /* 2. Calm the scrim now that bg is plain dark (no photo behind it) */
+  body.mobile-deck #s2 .s2-bg-scrim {
+    background: rgba(8,7,10,0.55) !important;
+  }
+
+  /* 3. Inline image: show at top, full-width, rounded - same pattern as s3/s5/s11 */
+  body.mobile-deck #s2 .mobile-inline-img {
+    display: block !important;
+    width: 100%;
+    height: clamp(160px, 40vw, 240px);
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 0 18px;
+    border: 1px solid var(--line-soft);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+    flex-shrink: 0;
+  }
+
+  /* 4. Compact text: body stays at 16px floor; tighten line-height to 1.45 */
+  body.mobile-deck #s2 .s2-e-point-body {
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* 5. Slightly smaller caps sub-headlines (point-title: AI IS CHANGING THE GAME / NAVIGATING...) */
+  body.mobile-deck #s2 .s2-e-point-title {
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0.13em !important;
+  }
+
+  /* 6. Tighten the gap between the two point blocks and their internal gap */
+  body.mobile-deck #s2 .s2-e-bottom {
+    gap: 14px 0 !important;
+  }
+  body.mobile-deck #s2 .s2-e-point {
+    gap: 5px !important;
+  }
+
+  /* 7. Inner gap: tighten s2-e-inner slightly */
+  body.mobile-deck #s2 .s2-e-inner {
+    gap: 16px !important;
+  }
+  /* ===== END TASK S2 MOBILE-PHOTO + COMPACT ===== */
+</style>
+<style>
+  /* ===== MOBILE POLISH PASS - 2026-07-02 general sweep =====
+     Scope: body.mobile-deck only. Desktop untouched.
+  */
+
+  /* S9: boost panel-card background for legibility on pink-archways photo */
+  body.mobile-deck #s9 .panel-card {
+    background: rgba(6,5,10,0.82) !important;
+  }
+  body.mobile-deck #s9 h2.display,
+  body.mobile-deck #s9 .big-num,
+  body.mobile-deck #s9 .subhead {
+    text-shadow: 0 1px 8px rgba(0,0,0,0.80) !important;
+  }
+
+  /* S12: ensure the Lab curtain bg is visible (not too dim) on mobile */
+  body.mobile-deck #s12 .slide-bg {
+    opacity: 0.80 !important;
+    filter: brightness(0.85) !important;
+  }
+
+  /* S4 MOBILE 2026-07-08: last row (Ralph Lauren, Showtime, Sunbeam, Bloomingdale's) too crowded
+     horizontally — shrink those 4 slightly + widen the gap. Mobile-only; other rows untouched. */
+  body.mobile-deck #s4 .s4-logo-grid > div:last-child {
+    gap: 14px 26px !important;
+  }
+  body.mobile-deck #s4 .s4-logo-grid > div:last-child > div {
+    flex: 0 1 40% !important;
+    max-width: 40% !important;
+    padding: 4px 4px !important;
+  }
+  body.mobile-deck #s4 .s4-logo-grid > div:last-child > div img {
+    max-height: 30px !important;
+    max-width: 118px !important;
+  }
+  /* S4 logo grid: on very narrow screens reduce gap so logos don't wrap awkwardly */
+  body.mobile-deck .s4-logo-grid {
+    gap: 8px 12px !important;
+  }
+  /* S4 MOBILE logo balance fix (resume 2026-07-06):
+     Override all individual logo inline heights/padding to normalize visual weight.
+     Cell height: 44px for all. Logo max-height: 26px for all (normalized base).
+     NBA portrait mark gets a tighter cap; wide wordmarks get boosted max-width. */
+  body.mobile-deck #s4 .s4-logo-grid > div {
+    gap: 8px 10px !important;
+  }
+  body.mobile-deck #s4 .s4-logo-grid > div > div {
+    height: 44px !important;
+    min-width: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 4px 8px !important;
+    box-sizing: border-box !important;
+    flex: 0 1 auto !important;
+    max-width: 120px !important;
+  }
+  /* All logos normalized to 26px max-height on mobile */
+  body.mobile-deck #s4 .s4-logo-grid > div > div img {
+    max-height: 36px !important;
+    max-width: 132px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* S5 redesign 2026-07-06: tagline is now .s5-tagline-free — ensure it wraps on mobile */
+  body.mobile-deck #s5 .s5-tagline-free div {
+    font-size: clamp(16px, 4.8vw, 22px) !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* S13: engage-card headings - tighten on mobile */
+  body.mobile-deck .engage-card h3 {
+    font-size: clamp(18px, 5.5vw, 24px) !important;
+  }
+
+  /* S14: contact card layout - ensure cards are centered and not too wide */
+  body.mobile-deck #s14 .slide-inner > div[style*="flex-wrap"] {
+    gap: 16px !important;
+    margin-top: 28px !important;
+  }
+
+  /* S15 Portfolio title: keep large display text, ensure no h-scroll */
+  body.mobile-deck #s15 h2.display {
+    font-size: clamp(40px, 12vw, 80px) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
+  }
+
+  /* CS slides (s16-s18): ensure stacked-imgs are reasonably sized */
+  body.mobile-deck .cs-stacked-imgs {
+    gap: 10px !important;
+  }
+  body.mobile-deck .cs-title {
+    font-size: clamp(28px, 9vw, 48px) !important;
+  }
+  body.mobile-deck .cs-body {
+    font-size: 15px !important;
+  }
+
+  /* S7 words FINAL (resume 2026-07-06): Trade Gothic, peach/white, no pink - consistent with desktop */
+  body.mobile-deck #s7 .s7-words > div {
+    font-family: var(--font-head) !important;
+    font-weight: 700 !important;
+    font-size: clamp(20px, 5.6vw, 30px) !important;
+    letter-spacing: 0.10em !important;
+    text-transform: uppercase !important;
+    color: #FFE2C0 !important;
+    -webkit-text-fill-color: #FFE2C0 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.85) !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    white-space: normal !important;
+  }
+
+  /* Prevent any rogue horizontal scroll globally on mobile */
+  body.mobile-deck .deck {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+  body.mobile-deck .slide {
+    overflow-x: hidden !important;
+  }
+
+  @media (max-width: 900px) {
+    #s9 .panel-card { background: rgba(6,5,10,0.82) !important; }
+    .s4-logo-grid { gap: 8px 12px !important; }
+    #s15 h2.display { font-size: clamp(40px, 12vw, 80px) !important; white-space: normal !important; }
+    .cs-title { font-size: clamp(28px, 9vw, 48px) !important; }
+  }
+  /* ===== END MOBILE POLISH PASS ===== */
+</style>
+<style>
+/* ═══════ BATCH5 2026-07-07 — Theresa 18-item batch + copy bible ═══════ */
+/* item17: page counters upper-right on every slide */
+.counter { left: auto !important; right: calc(var(--inset) + 78px) !important; top: calc(var(--inset) + 4px) !important; }
+/* item17: case-study kicker → bottom right, numbered */
+.cs-new-template .cs-kicker-corner { top: auto !important; bottom: calc(var(--inset) + 8px) !important; right: calc(var(--inset) + 78px) !important; }
+/* item8: s7 subtitle avenir, slightly smaller */
+#s7 .s7-opener-tagline { font-family: var(--font-body) !important; font-size: clamp(22px, calc(2.6 * var(--uw)), 35px) !important; /* BATCH30 2026-07-09: max 42->35 */ letter-spacing: 0.10em !important; font-weight: 400; }
+/* item10: caps strip anchored to lower area of s7 */
+#s7 .s7-opener-left { flex: 1 1 auto !important; }
+#s7 .s7-caps-strip { margin-top: auto !important; }
+/* item13: quotes s3+s11 — thin peach→terracotta gradient border, blur, lower fill */
+.quote-card-right { position: relative; background: rgba(13,17,23,0.74) !important; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.quote-card-right::before { content:""; position:absolute; inset:0; padding:1px; background:linear-gradient(135deg,#FFE2C0,#C47D6A); -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none; z-index:2; }
+/* item18: mobile quote cards centered */
+body.mobile-deck .quote-card-right { width: calc(100% - 40px) !important; max-width: 460px !important; margin: 28px auto !important; flex: 0 0 auto !important; align-self: center !important; }
+/* items 1/2/4: s6 hierarchy alignment via subgrid + inner bullet cards + tagline pop */
+.s6-card { display: grid !important; grid-template-rows: subgrid; grid-row: span 4; }
+@supports not (grid-template-rows: subgrid) { .s6-card { display: flex !important; flex-direction: column; } }
+body.mobile-deck .s6-card { display: flex !important; flex-direction: column; }
+.s6-card-title { font-family: var(--font-body) !important; font-weight: 400 !important; letter-spacing: 0.08em !important; text-transform: uppercase; }
+.s6-bullet-box { background: rgba(255,255,255,0.045); border: 1px solid rgba(196,125,106,0.22); border-radius: 10px; padding: clamp(14px, calc(1.6*var(--uh)), 20px) clamp(16px, calc(1.8*var(--uw)), 24px); align-self: start; }
+.s6-tagline-pop { font-family: var(--font-body); font-weight: 700; font-size: clamp(17px, calc(1.45 * var(--uw)), 21px); line-height: 1.2; letter-spacing: 0.04em; text-transform: uppercase; background: linear-gradient(120deg, #FFE2C0, #C47D6A); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; align-self: end; width: 100%; box-sizing: border-box; }
+/* item7: s5 tagline one line */
+.s5-tagline-line { white-space: normal; }
+body.mobile-deck .s5-tagline-line { white-space: normal !important; font-size: clamp(18px, 5.2vw, 26px) !important; }
+/* S12FIX 2026-07-08 (desktop): enlarge render, tighten vertical budget so all 6 cards fit at 1440x810 */
+body:not(.mobile-deck) #s12 { padding-top: 18px !important; padding-bottom: 16px !important; }
+body:not(.mobile-deck) #s12 .slide-inner { gap: 10px !important; }
+body:not(.mobile-deck) #s12 .slide-inner > div:first-child { padding-top: 12px !important; }
+body:not(.mobile-deck) #s12 .s12-render-wrap img { height: 310px !important; } /* BATCH21 2026-07-09 */
+body:not(.mobile-deck) #s12 .lab-sys { padding: 12px 16px !important; }
+body:not(.mobile-deck) #s12 .lab-sys h4 { font-size: 15px !important; margin-bottom: 6px !important; }
+body:not(.mobile-deck) #s12 .lab-sys p { font-size: 14px !important; line-height: 1.42 !important; }
+/* item14: s12 render + 3x2 cards on mobile */
+body.mobile-deck .s12-render-wrap, body.mobile-deck .s12-cards-grid { width: 100% !important; }
+body.mobile-deck .s12-render-wrap img { height: auto !important; aspect-ratio: 1614 / 909; object-fit: cover !important; }
+body.mobile-deck .s12-render-wrap picture,
+body.mobile-deck .s12-render-wrap picture img { width: 100% !important; display: block !important; }
+body.mobile-deck .s12-cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px !important; }
+body.mobile-deck .s12-cards-grid .lab-sys { min-width: 0 !important; padding: 14px 14px 13px !important; }
+body.mobile-deck .s12-cards-grid .lab-sys h4 { font-size: 11px !important; line-height: 1.28 !important; }
+body.mobile-deck .s12-cards-grid .lab-sys p { font-size: 12px !important; line-height: 1.45 !important; }
+@media (max-width: 390px) {
+  body.mobile-deck .s12-render-wrap img,
+  #s12 .s12-render-wrap img { height: auto !important; aspect-ratio: 1614 / 909; object-fit: cover !important; }
+  body.mobile-deck .s12-cards-grid,
+  #s12 .s12-cards-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
+  body.mobile-deck .s12-cards-grid .lab-sys,
+  #s12 .s12-cards-grid .lab-sys { padding: 15px 14px !important; word-break: normal !important; overflow-wrap: break-word !important; hyphens: none !important; }
+  body.mobile-deck .s12-cards-grid .lab-sys h4,
+  #s12 .s12-cards-grid .lab-sys h4 { word-break: normal !important; overflow-wrap: break-word !important; hyphens: none !important; }
+}
+/* item19: s14 CTA stays intact on mobile */
+.cta-link-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 28px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font: 500 14px var(--font-mono);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.cta-link-box .cta-link-arrow {
+  flex: 0 0 auto;
+  line-height: 1;
+}
+body.mobile-deck .cta-link-box {
+  max-width: calc(100vw - 56px);
+  padding: 12px 18px;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+}
+@media (max-width: 900px) {
+  .cta-link-box {
+    max-width: calc(100vw - 56px);
+    padding: 12px 18px;
+    gap: 8px;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+  }
+}
+/* item20: s15 mobile title breaks by words, never inside selections */
+body.mobile-deck #s15 .s15-title-line {
+  display: block;
+  white-space: nowrap;
+}
+body.mobile-deck #s15 h2.display {
+  overflow-wrap: normal !important;
+  word-break: keep-all !important;
+  hyphens: none !important;
+}
+@media (max-width: 900px) {
+  #s15 .s15-title-line {
+    display: block;
+    white-space: nowrap;
+  }
+  #s15 h2.display {
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    hyphens: none !important;
+  }
+}
+/* item16: mobile s4 — dark plate behind logo band so logos stay legible over bright bg */
+body.mobile-deck #s4 .s4-logo-grid { background: rgba(6,5,10,0.78); border: 1px solid rgba(196,125,106,0.22); border-radius: 12px; padding: 40px 12px; } /* BATCH33 2026-07-09 */
+/* item16: s6 stacks on mobile (subgrid off) */
+body.mobile-deck #s6 .s6-cards-grid { grid-template-columns: 1fr !important; }
+</style>
+</head>
+<body>
+<div id="grain" aria-hidden="true"></div>
+<div class="deck">
+
+<!-- ════════════ COVER ════════════ -->
+<section class="slide" id="cover">
+  <div class="slide-bg" style="background-image:url('assets/cover-cobblestone-lane.webp'); background-size:cover; background-position:center;"></div>
+  <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(8,7,10,0.45) 0%, rgba(8,7,10,0.28) 40%, rgba(8,7,10,0.55) 100%);"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <!-- Cover: no page counter (clean cover). Wordmark replaced with SVG logo grad light. -->
+  <div style="position:absolute; inset:0; z-index:3; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 clamp(24px, calc(3 * var(--uw)), 60px);">
+    <!-- SVG logo lockup replacing text wordmark -->
+    <img src="assets/cobblestone-labs-logo-grad-light.svg" alt="Cobblestone Labs" style="width:clamp(280px, calc(32 * var(--uw)), 520px); height:auto; margin-bottom:clamp(20px, calc(2.8 * var(--uh)), 44px); display:block;">
+    <div style="font-family:'Avenir Next', var(--font-body); font-weight:400; font-size:clamp(20px, calc(2.0 * var(--uw)), 30px); letter-spacing:0.16em; text-transform:uppercase; background:linear-gradient(135deg,#D9DBF4,#7F83A7); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; line-height:1.72; max-width:26em;">WHERE AI MEETS THE PHYSICAL WORLD AND BRANDS SEE THE DIFFERENCE.</div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 1 - Brand Statement ════════════ -->
+<section class="slide" id="s1">
+  <div class="slide-bg" style="background-image:url('assets/slide1-headphones-portals.webp'); background-size:cover; background-position:center;"></div>
+  <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(8,7,10,0.02) 0%, rgba(8,7,10,0.08) 34%, rgba(8,7,10,0.45) 66%, rgba(8,7,10,0.72) 100%);"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-01</span></div>
+  <div class="slide-inner reveal" style="display:flex; justify-content:flex-end;">
+    <img class="mobile-inline-img" src="assets/slide1-headphones-portals.webp" alt="" loading="lazy">
+    <div class="s1-card" style="max-width:640px; padding:clamp(28px, calc(3.5 * var(--uw)), 52px); background:rgba(10,10,13,0.58); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border-left:2px solid var(--copper);">
+      <h2 class="display">The Future of Brand Experiences Is&nbsp;Here.</h2>
+      <p class="lede" style="margin-top:28px;">Cobblestone Labs designs and builds AI-powered experiences that transform physical environments into immersive, adaptive interactions - driving stronger business outcomes for brands, agencies, and commercial&nbsp;spaces.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 2 - Market & Need ════════════ -->
+<section class="slide dark-only" id="s2">
+  <!-- dress-store-wide.png bg via CSS; translucent left→right gradient scrim -->
+  <div class="s2-bg-scrim" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-02</span></div>
+  <div class="s2-e-inner reveal">
+
+    <!-- Mobile-only inline photo banner (matches pattern of other slides; hides on desktop via CSS) -->
+    <img class="mobile-inline-img" src="assets/s2-showroom-girl.webp" alt="" loading="lazy">
+
+    <!-- TOP: headline (kicker hidden via CSS) -->
+    <div class="s2-e-top">
+      <span class="s2-e-kicker" aria-hidden="true">The Landscape</span>
+      <h2 class="s2-e-headline">Experiential Marketing<br>Is Changing. Fast.</h2>
+    </div>
+
+    <!-- HERO PANEL: dark card - $139B left + paragraph+citation right -->
+    <div class="s2-e-hero">
+      <div class="s2-e-stat-col">
+        <span class="s2-e-stat">$139B</span>
+        <div class="s2-e-stat-label">Global Experiential Marketing Spend</div>
+      </div>
+      <div class="s2-e-stat-copy">
+        <p class="s2-e-stat-body">Up nearly 60% since 2020, with brands investing more than ever in live experiences that build deeper audience&nbsp;connections.</p>
+        <p class="s2-e-stat-cite">PQ Media's Global B2C &amp; B2B Experiential Marketing Forecast 2026-2030</p>
+      </div>
+    </div>
+
+    <!-- BOTTOM: two columns with vertical divider -->
+    <div class="s2-e-bottom">
+      <div class="s2-e-point">
+        <div class="s2-e-point-title">AI Is Changing The Game</div>
+        <p class="s2-e-point-body">AI has unlocked a new era of intelligent experiences that adapt and respond in real time, creating powerful new opportunities for brands to stand out.</p>
+      </div>
+      <div class="s2-e-divider" aria-hidden="true"></div>
+      <div class="s2-e-point">
+        <div class="s2-e-point-title">Navigating This Shift Requires Expertise</div>
+        <p class="s2-e-point-body">Realizing that potential requires a partner that understands emerging technologies, can validate what works, and translates innovation into measurable business&nbsp;impact.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 3 - CEO Quote ════════════ -->
+<section class="slide" id="s3" style="padding:0;">
+  <!-- Full-bleed shoe-store journey bg -->
+  <div class="slide-bg" style="background-image:url('assets/quote-shoestore-journey.webp'); background-size:cover; background-position:center;"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-03</span></div>
+  <div class="slide-inner reveal s3-inner">
+    <img class="mobile-inline-img" src="assets/quote-shoestore-journey.webp" alt="" loading="lazy">
+    <div class="quote-card-right">
+      <p class="qcr-text">"WE ARE CHANGING WHAT IT MEANS TO EXPERIENCE A BRAND IN THE PHYSICAL WORLD, WHERE AI RESPONDS TO HUMAN BEHAVIOR, ENVIRONMENTS COME ALIVE, AND AUDIENCES HELP SHAPE THE EXPERIENCE INTO SOMETHING THEY WILL REMEMBER AND SHARE."</p>
+      <div class="qcr-attr">
+        <div class="qcr-name">CRAIG SPITZER</div>
+        <div class="qcr-title">CEO, COBBLESTONE LABS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 4 - Logo Reel ════════════ -->
+<section class="slide dark-only" id="s4" style="flex-direction:column; justify-content:flex-start; padding-bottom:0; background:rgb(6,6,10);">
+  <!-- 2026-07-06 batch: new neon speaker-experience room background -->
+  <div class="slide-bg" style="background-image:url('assets/s4-speaker-neon-room-v2.webp?v=2'); background-position:center 40%; background-size:cover; opacity:0.76;"></div>
+  <!-- Dark gradient overlay for legibility — BATCH5 item6: lightened so bg reads more -->
+  <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(4,4,8,0.46) 0%, rgba(6,5,10,0.38) 55%, rgba(8,6,12,0.52) 100%); pointer-events:none;"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-04</span></div>
+  <!-- BATCH7 2026-07-07: title moved UP (justify flex-start), logos +60% & equalized proportion, wider spread, opacity 0.83 -->
+  <div class="slide-inner reveal" style="text-align:center; flex:1; display:flex; flex-direction:column; justify-content:flex-start; gap:0; padding-top:clamp(20px, calc(2.8 * var(--uh)), 40px); padding-bottom:clamp(28px, calc(4 * var(--uh)), 56px);">
+    <h2 class="display" style="margin-bottom:clamp(28px, calc(3.6 * var(--uh)), 52px);">Built for Brands Like Yours</h2>
+    <!-- 2026-07-06: no box/card behind logos - logos float over the neon bg -->
+    <div style="position:relative; z-index:3; flex:1 1 auto; display:flex; align-items:center; padding:clamp(12px, calc(1.6 * var(--uh)), 24px) clamp(16px, calc(2.0 * var(--uw)), 32px); max-width:1340px; width:100%; margin:0 auto; box-sizing:border-box;">
+      <style>/* BATCH7: no transform scaling - sizes baked into max-heights (+60%, visually equalized); rows spread wider */ #s4 .s4-logo-grid img{ transform:none; } body.mobile-deck #s4 .s4-logo-grid img{ transform:none; } body.mobile-deck #s4 .s4-logo-grid > div > div{ height:auto !important; padding:2px 8px !important; }</style>
+      <!-- 15 logos normalized: 2 tiers - T1=wordmarks (wide), T2=compact marks (square/portrait). Unified opacity 0.88 over dark plate. ralphlauren uses boosted variant. -->
+      <!-- CELL macro (2026-07-06): logos balanced by visual weight, not enforced equal height.
+           Strategy: cell height = clamp(52,6.2vh,72px). Each logo constrained individually
+           so visual footprint feels equal regardless of aspect ratio.
+           - Wide wordmarks (1.75:1): max-h 34px, max-w 220px
+           - Moderately wide (2.5:1+): max-h 30px, max-w 240px
+           - Very wide (5:1+, e.g. bloomingdales, ralphlauren): max-h 22px, max-w 280px
+           - Square (ncaa, wellsky, hbolatino): max-h 38px, max-w 58px
+           - Portrait (nba 104x252 = ~0.4:1): max-h 48px, no max-w constraint
+           - HP (short wordmark): max-h 34px, max-w 80px -->
+      <div class="s4-logo-grid" aria-label="Client logos" style="display:flex; flex-flow:column nowrap; justify-content:center; align-items:center; row-gap:clamp(20px,calc(5.6*var(--uh)),48px); width:100%;">
+        <!-- Row 1: 5 wordmark logos -->
+        <div style="display:flex; flex-wrap:wrap; gap:clamp(14px,calc(2.2*var(--uw)),40px) clamp(16px,calc(3.4*var(--uw)),56px); justify-content:center; align-items:center; width:100%;">
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/adcouncil-final-knockout.webp" alt="Ad Council" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(34px,calc(9.3*var(--uh)),76px);max-width:340px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/allergan-solid.webp" alt="Allergan" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(34px,calc(9.3*var(--uh)),76px);max-width:340px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/allstate-solid.webp" alt="Allstate" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(34px,calc(9.3*var(--uh)),76px);max-width:340px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/canon-solid.webp" alt="Canon" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(34px,calc(9.3*var(--uh)),76px);max-width:340px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/clinique-solid.webp" alt="Clinique" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(34px,calc(9.3*var(--uh)),76px);max-width:340px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+        </div>
+        <!-- Row 2: 5 logos - NBA portrait, NCAA square, HP short, HBO wide, Procure wide -->
+        <div style="display:flex; flex-wrap:wrap; gap:clamp(14px,calc(2.2*var(--uw)),40px) clamp(16px,calc(3.4*var(--uw)),56px); justify-content:center; align-items:center; width:100%;">
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/hbolatino-solid.webp" alt="HBO Latino" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(38px,calc(10.7*var(--uh)),88px);max-width:280px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/hp-solid.webp" alt="HP" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(34px,calc(9.3*var(--uh)),76px);max-width:140px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/nba-solid.webp" alt="NBA" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(48px,calc(13.3*var(--uh)),110px);max-width:60px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/ncaa-solid.webp" alt="NCAA" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(44px,calc(12.3*var(--uh)),102px);max-width:104px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/procure-solid.webp" alt="Procure" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(30px,calc(8.3*var(--uh)),69px);max-width:340px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/wellsky.webp" alt="WellSky" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(36px,calc(10.2*var(--uh)),84px);max-width:240px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+        </div>
+        <!-- Row 3: 5 logos - wide/very-wide marks balanced down -->
+        <div style="display:flex; flex-wrap:wrap; gap:clamp(14px,calc(2.2*var(--uw)),40px) clamp(16px,calc(3.4*var(--uw)),56px); justify-content:center; align-items:center; width:100%;">
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/ralphlauren-solid-boosted.webp" alt="Ralph Lauren" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(24px,calc(6.7*var(--uh)),56px);max-width:400px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/showtime-solid.webp" alt="Showtime" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(30px,calc(8.3*var(--uh)),69px);max-width:340px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/sunbeam-solid.webp" alt="Sunbeam" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(30px,calc(8.3*var(--uh)),69px);max-width:340px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:clamp(56px,calc(13.6*var(--uh)),114px);padding:4px 10px;"><img src="assets/logos/bloomingdales-solid.webp" alt="Bloomingdale's" style="opacity:0.75;filter:brightness(1.0);max-height:clamp(20px,calc(5.7*var(--uh)),48px);max-width:400px;width:auto;height:auto;object-fit:contain;display:block;"></div>
+        </div>
+      </div>
+    </div><!-- /logo grid -->
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 5 - What We Create ════════════ -->
+<!-- BATCH4 2026-07-06: full reformat — WHAT WE DELIVER block on top, WHY IT MATTERS 3 horizontal cards
+     across bottom; larger type throughout; tagline enlarged + pops as closing anchor; bg people visible. -->
+<!-- ===== S5 REDESIGN batch4: directional scrim, deliver on top, why-cards horizontal bottom ===== -->
+<section class="slide" id="s5" style="overflow:visible; align-items:stretch;">
+  <!-- BATCH7 2026-07-07: slide rebuilt to Theresa's mockup — title+sub top-left (copper caps), WHAT WE DELIVER top-right,
+       WHY IT MATTERS header + 3 outlined boxes across the bottom, centered caps tagline at the base. New bg (her attached raw image). -->
+  <div class="slide-bg" style="background-image:url('assets/s5-bg-v4.webp'); background-position:center; background-size:cover;"></div>
+  <!-- Left scrim for the title block -->
+  <div aria-hidden="true" style="position:absolute; inset:0; z-index:0; background:linear-gradient(100deg, rgba(5,4,9,0.64) 0%, rgba(5,4,9,0.38) 24%, rgba(5,4,9,0.10) 42%, transparent 55%); pointer-events:none;"></div>
+  <!-- Right-top scrim behind WHAT WE DELIVER -->
+  <!-- BATCH13 2026-07-09: right scrim extended full-height — Why-It-Matters cards now stack vertically under What-We-Deliver in the right column -->
+  <div aria-hidden="true" style="position:absolute; right:0; top:0; width:46%; height:100%; z-index:0; background:linear-gradient(to left, rgba(5,4,9,0.58) 0%, rgba(5,4,9,0.30) 52%, transparent 100%); pointer-events:none;"></div>
+  <!-- Bottom anchor gradient for boxes + tagline -->
+  <div aria-hidden="true" style="position:absolute; bottom:0; left:0; right:0; height:48%; z-index:0; background:linear-gradient(to top, rgba(4,3,8,0.72) 0%, rgba(4,3,8,0.44) 42%, rgba(4,3,8,0.14) 74%, transparent 100%); pointer-events:none;"></div>
+  <!-- Mobile-only heavy overlay -->
+  <div class="s5-mobile-overlay" aria-hidden="true" style="display:none; position:absolute; inset:0; z-index:0; background:rgba(6,4,10,0.68); pointer-events:none;"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-05</span></div>
+
+  <div class="slide-inner s5-redesign-inner reveal" style="position:relative; z-index:3; width:100%; max-width:100%; margin:0; display:flex; flex-direction:column; padding:clamp(36px,calc(5.2*var(--uh)),58px) 0 clamp(46px,calc(6.0*var(--uh)),70px); box-sizing:border-box; min-height:810px;">
+    <img class="mobile-inline-img" src="assets/s5-bg-v4.webp" alt="Diners at an immersive dining experience with projected light trails across the table" loading="lazy">
+
+    <!-- BATCH25 2026-07-09: 10px margin on s5-cols (common parent of head-col + What We Deliver) --><div class="s5-cols" style="margin:10px; flex:0 0 auto; display:flex; justify-content:space-between; align-items:flex-start; gap:clamp(24px,calc(3.0*var(--uw)),56px); padding-left:clamp(32px,calc(3.4*var(--uw)),60px); padding-right:clamp(32px,calc(3.4*var(--uw)),60px); box-sizing:border-box; min-width:0;">
+
+      <!-- ======== TOP-LEFT: title + subtitle in copper caps (mockup) ======== -->
+      <div class="s5-left" style="flex:0 1 46%; max-width:620px; min-width:0;">
+        <!-- BATCH16 2026-07-09: 16px margin around headline+subcopy container --><div class="s5-head-col" style="margin:16px;">
+          <h2 class="display" style="margin:0; max-width:520px; font-family:var(--font-mono); font-weight:700; font-size:clamp(30px, calc(3.9 * var(--uw)), 50px) /* BATCH22 2026-07-09 */; line-height:1.18; letter-spacing:0.12em; text-transform:uppercase; word-break:break-word; overflow-wrap:break-word; background:linear-gradient(180deg, #F0B18C 0%, #CE8168 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; animation:none; text-shadow:none;">AI-Powered Experiences That Know Your Audience</h2>
+          <p style="margin:clamp(16px,calc(2.4*var(--uh)),28px) 0 0; max-width:26em; font-family:var(--font-body); font-size:clamp(14px,calc(1.5*var(--uw)),20px) /* BATCH23 2026-07-09 */; line-height:1.55; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; background:linear-gradient(135deg, #D9DBF4 0%, #7F83A7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; text-shadow:none; overflow-wrap:break-word; word-break:break-word;">Custom-built immersive experiences that adapt to audience behavior, demographics, and preferences in real time.</p>
+        </div>
+      </div><!-- /s5-left -->
+
+      <!-- ======== TOP-RIGHT: WHAT WE DELIVER stacked list (mockup) ======== -->
+      <!-- BATCH17b 2026-07-09: 20px margin-top on What We Deliver container (Craig; rev of BATCH17 16px) --><div class="s5-right s5-deliver" style="flex:0 1 38%; max-width:460px; min-width:0; padding-top:clamp(6px,calc(1.0*var(--uh)),14px); margin-top:20px;">
+        <div style="font:700 clamp(15px,calc(1.35*var(--uw)),20px) var(--font-mono); letter-spacing:0.26em; text-transform:uppercase; color:var(--white); margin-bottom:clamp(12px,calc(1.6*var(--uh)),20px); text-shadow:0 1px 12px rgba(0,0,0,0.7);">What We Deliver</div>
+        <div class="s5-why-row" style="margin-bottom:clamp(10px,calc(1.5*var(--uh)),18px);">
+          <div style="font-family:var(--font-body); font-weight:600; /* BATCH39 2026-07-09 */ font-size:clamp(14px,calc(1.22*var(--uw)),18px); line-height:1.55; letter-spacing:0.05em; text-transform:uppercase; color:rgba(233,230,242,0.92); text-shadow:0 1px 12px rgba(0,0,0,0.7);">Temporary or permanent activations across any environment</div>
+        </div>
+        <div class="s5-why-row" style="margin-bottom:clamp(10px,calc(1.5*var(--uh)),18px);">
+          <div style="font-family:var(--font-body); font-weight:600; /* BATCH39 2026-07-09 */ font-size:clamp(14px,calc(1.22*var(--uw)),18px); line-height:1.55; letter-spacing:0.05em; text-transform:uppercase; color:rgba(233,230,242,0.92); text-shadow:0 1px 12px rgba(0,0,0,0.7);">Real-time audience tracking and responsive content creation across all mediums</div>
+        </div>
+        <div class="s5-why-row" style="margin-bottom:0;">
+          <div style="font-family:var(--font-body); font-weight:600; /* BATCH39 2026-07-09 */ font-size:clamp(14px,calc(1.22*var(--uw)),18px); line-height:1.55; letter-spacing:0.05em; text-transform:uppercase; color:rgba(233,230,242,0.92); text-shadow:0 1px 12px rgba(0,0,0,0.7);">End-to-end strategy, design, development, deployment, and analytics</div>
+        </div>
+
+      </div><!-- /s5-right -->
+
+    </div><!-- /s5-cols -->
+
+    <div style="flex:1 1 auto; min-height:clamp(16px,calc(3.0*var(--uh)),40px);"></div>
+
+    <!-- ======== BOTTOM: WHY IT MATTERS header + 3 outlined boxes + centered tagline (mockup) ======== -->
+    <div class="s5-bottom" style="flex:0 0 auto; padding-left:clamp(32px,calc(3.4*var(--uw)),60px); padding-right:clamp(32px,calc(3.4*var(--uw)),60px); box-sizing:border-box; min-width:0;">
+      <!-- BATCH13: Why-It-Matters header + cards moved up into .s5-right; only the tagline remains here -->
+        <!-- BATCH14 2026-07-09: WHY IT MATTERS moved to s5-bottom above tagline — heading row + 3 cards in one horizontal row (Craig) -->
+        <div class="s5-why-head" style="padding-left:20px; /* BATCH26 2026-07-09 desktop */ font:700 clamp(15px,calc(1.35*var(--uw)),20px) var(--font-mono); letter-spacing:0.26em; text-transform:uppercase; color:var(--white); margin:clamp(18px,calc(2.6*var(--uh)),30px) 0 clamp(10px,calc(1.4*var(--uh)),16px); transform:translateY(-14px); /* BATCH31b 2026-07-09: -14px desktop lift (margin approach was absorbed by flex spacer) */ text-shadow:0 1px 12px rgba(0,0,0,0.7);">Why It Matters to Brands</div>
+        <div class="s5-why-cards" style="margin:20px; /* BATCH19 2026-07-09 desktop margin */ transform:translateY(-14px); /* BATCH31b 2026-07-09 */ display:flex; flex-direction:row; gap:clamp(10px,calc(1.4*var(--uh)),16px); align-items:stretch;">
+          <div class="s5-why-card" style="flex:1 1 0; min-width:0; border:1px solid rgba(214,152,122,0.60); background:rgba(8,6,12,0.38); padding:clamp(10px,calc(1.4*var(--uh)),16px) clamp(14px,calc(1.4*var(--uw)),22px); box-sizing:border-box;">
+            <div style="font:700 clamp(13px,calc(1.1*var(--uw)),16px) var(--font-mono); letter-spacing:0.22em; text-transform:uppercase; color:#FFE9CD; margin-bottom:clamp(4px,calc(0.7*var(--uh)),8px); text-shadow:0 1px 10px rgba(0,0,0,0.7);">Personalization</div>
+            <div style="font-family:var(--font-body); font-size:clamp(14px,calc(1.15*var(--uw)),17px); line-height:1.45; color:rgba(233,230,244,0.94); text-shadow:0 1px 12px rgba(0,0,0,0.7);">Personalized experiences that adapt with every interaction</div>
+          </div>
+          <div class="s5-why-card" style="flex:1 1 0; min-width:0; border:1px solid rgba(214,152,122,0.60); background:rgba(8,6,12,0.38); padding:clamp(10px,calc(1.4*var(--uh)),16px) clamp(14px,calc(1.4*var(--uw)),22px); box-sizing:border-box;">
+            <div style="font:700 clamp(13px,calc(1.1*var(--uw)),16px) var(--font-mono); letter-spacing:0.22em; text-transform:uppercase; color:#FFE9CD; margin-bottom:clamp(4px,calc(0.7*var(--uh)),8px); text-shadow:0 1px 10px rgba(0,0,0,0.7);">Efficiencies</div>
+            <div style="font-family:var(--font-body); font-size:clamp(14px,calc(1.15*var(--uw)),17px); line-height:1.45; color:rgba(233,230,244,0.94); text-shadow:0 1px 12px rgba(0,0,0,0.7);">Build once, deploy everywhere, and maximize every investment</div>
+          </div>
+          <div class="s5-why-card" style="flex:1 1 0; min-width:0; border:1px solid rgba(214,152,122,0.60); background:rgba(8,6,12,0.38); padding:clamp(10px,calc(1.4*var(--uh)),16px) clamp(14px,calc(1.4*var(--uw)),22px); box-sizing:border-box;">
+            <div style="font:700 clamp(13px,calc(1.1*var(--uw)),16px) var(--font-mono); letter-spacing:0.22em; text-transform:uppercase; color:#FFE9CD; margin-bottom:clamp(4px,calc(0.7*var(--uh)),8px); text-shadow:0 1px 10px rgba(0,0,0,0.7);">Measurement</div>
+            <div style="font-family:var(--font-body); font-size:clamp(14px,calc(1.15*var(--uw)),17px); line-height:1.45; color:rgba(233,230,244,0.94); text-shadow:0 1px 12px rgba(0,0,0,0.7);">Unique AI-driven engagement insights that capture audience attention and intent</div>
+          </div>
+        </div>
+
+      <!-- CLOSING tagline — centered, big caps, cream→copper gradient (mockup) -->
+      <!-- BATCH15 2026-07-09: one empty row of breathing room between why-cards and tagline (Craig) -->
+      <div class="s5-tagline-free" style="margin-top:clamp(24px,calc(3*var(--uh)),40px); text-align:center;">
+        <div class="s5-tagline-line" style="display:inline-block; font-family:var(--font-mono); font-weight:700; font-size:clamp(19px,calc(2.35*var(--uw)),30px)/* BATCH24 2026-07-09 */; line-height:1.25; letter-spacing:0.18em; text-transform:uppercase; background:linear-gradient(90deg, #FFEBD2 0%, #DFA083 55%, #C47D6A 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; text-shadow:none;">Genuine customer connection. Real business results.</div>
+      </div>
+    </div><!-- /s5-bottom -->
+
+  </div>
+</section>
+<!-- ===== END S5 MOCKUP REBUILD 2026-07-07 ===== -->
+
+<!-- ════════════ SLIDE 6 - Where We Deploy ════════════ -->
+<!-- ITEM 10: s6 now has s5 layout: title/lede on TOP + two cards SIDE BY SIDE. Own content + new bg kept. -->
+<section class="slide" id="s6" style="justify-content:flex-start;">
+  <div class="slide-bg" style="background-image:url('assets/s6-aerial-dining.webp'); background-size:cover; background-position:center;"></div>
+  <!-- ITEM6: darker overlay than original but still shows the aerial-dining photo -->
+  <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(8,7,10,0.90) 0%, rgba(8,7,10,0.80) 42%, rgba(8,7,10,0.68) 70%, rgba(8,7,10,0.82) 100%), linear-gradient(0deg, rgba(8,7,10,0.60) 0%, rgba(8,7,10,0.15) 45%);"></div>
+  <div class="orbs" aria-hidden="true"><span class="orb orb-1"></span><span class="orb orb-2"></span></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-06</span></div>
+  <!-- ITEM6: title top, cards pushed halfway between title and bottom -->
+  <div class="slide-inner reveal" style="display:flex; flex:1 1 0; align-self:stretch; flex-direction:column; align-items:stretch; justify-content:flex-start; gap:0; padding-top:clamp(56px, calc(7 * var(--uh)), 90px); padding-bottom:clamp(56px, calc(7 * var(--uh)), 90px); min-height:640px; box-sizing:border-box;">
+    <img class="mobile-inline-img" src="assets/s6-aerial-dining.webp" alt="" loading="lazy">
+    <!-- Title clean - no copper border-left per Theresa feedback -->
+    <div>
+      <h2 class="display" style="font-size:clamp(28px, calc(3.8 * var(--uw)), 58px);">Every Space Can Be&nbsp;Intelligent.</h2>
+    </div>
+    <!-- BATCH7: spacer before grew (1 -> 1.5 + min-height) for more air between title and boxes per Theresa -->
+    <div class="s6-spacer" style="flex:1.5; min-height:clamp(28px, calc(4 * var(--uh)), 56px);"></div>
+    <!-- BATCH5: "Where We Deploy" + "Temporary or permanent activations" removed per copy bible -->
+    <!-- Two cards SIDE BY SIDE — subgrid so title/intro/bullets/tagline rows align across boxes -->
+    <div class="s6-cards-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(18px, calc(2.4 * var(--uw)), 36px); align-items:stretch;">
+      <!-- Card 1: Consumer -- flex column with tagline pinned to bottom -->
+      <div class="panel-card s6-card" style="background:rgba(10,10,13,0.70); border:1px solid rgba(196,125,106,0.35); padding:clamp(22px, calc(2.4 * var(--uh)), 38px) clamp(24px, calc(2.6 * var(--uw)), 40px); display:flex; flex-direction:column;">
+        <div class="s6-card-title" style="font-size:clamp(20px, calc(1.65 * var(--uw)), 27px); color:var(--peach); margin-bottom:14px;">Consumer Environments</div>
+        <p class="s6-card-tagline" style="font-size:clamp(17px, calc(1.45 * var(--uw)), 23px); margin:0 0 14px; line-height:1.5; letter-spacing:0.04em; font-weight:700; background:linear-gradient(135deg,#D9DBF4,#7F83A7); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;">Stand out in crowded markets with relevant, interactive experiences that deepen audience connection and inspire action.</p>
+        <div class="s6-bullet-box">
+        <ul class="bullets" style="margin:0; line-height:1.55;">
+          <li>Product Launches &amp; Pop-Ups</li>
+          <li>Retail &amp; Flagship Activations</li>
+          <li>Hospitality, Sports, &amp; Entertainment Venues</li>
+        </ul>
+        </div>
+        <div class="s6-tagline-pop" style="margin-top:18px; padding-top:16px; border-top:1px solid rgba(196,125,106,0.25);">Make Every Interaction Human.</div>
+      </div>
+      <!-- Card 2: B2B -- flex column with tagline pinned to bottom -->
+      <div class="panel-card s6-card" style="background:rgba(10,10,13,0.70); border:1px solid rgba(196,125,106,0.35); padding:clamp(22px, calc(2.4 * var(--uh)), 38px) clamp(24px, calc(2.6 * var(--uw)), 40px); display:flex; flex-direction:column;">
+        <div class="s6-card-title" style="font-size:clamp(20px, calc(1.65 * var(--uw)), 27px); color:var(--peach); margin-bottom:14px;">B2B &amp; Enterprise Environments</div>
+        <p class="s6-card-tagline" style="font-size:clamp(17px, calc(1.45 * var(--uw)), 23px); margin-bottom:14px; line-height:1.5; letter-spacing:0.04em; font-weight:700; display:inline-block; width:100%; isolation:isolate; background:linear-gradient(135deg,#D9DBF4,#7F83A7) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; color:transparent !important;">Transform corporate spaces into intelligent, personalized experiences where every interaction advances a business opportunity.</p>
+        <div class="s6-bullet-box">
+        <ul class="bullets" style="margin:0; line-height:1.55;">
+          <li>Client Experience &amp; Executive Centers</li>
+          <li>Corporate &amp; Hotel Lobbies, Offices &amp; Amenity Areas</li>
+          <li>Trade Shows &amp; Conferences</li>
+        </ul>
+        </div>
+        <div class="s6-tagline-pop" style="margin-top:18px; padding-top:16px; border-top:1px solid rgba(196,125,106,0.25);">Turn Your Space into a Sales Engine.</div>
+      </div>
+    </div>
+    <!-- Spacer after: equal to spacer before - centers cards in lower half (batch6) -->
+    <div style="flex:1;"></div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 7 - Why Brands Choose ════════════ -->
+<section class="slide dark-only" id="s7">
+  <!-- Full-bleed court photo background -->
+  <div class="slide-bg-s7" aria-hidden="true"></div>
+  <!-- Corner brackets -->
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <!-- Page counter: 07/19 -->
+  <div class="counter"><span class="cnt">-07</span></div>
+
+  <!-- FULL-BLEED LAYOUT WRAPPER -->
+  <!-- Bottom scrim for caps bar legibility -->
+  <div class="s7-bottom-scrim" aria-hidden="true"></div>
+  <!-- BATCH4: caps strip MOVED BACK to s7 from s10; larger text so strip wraps to 2 lines -->
+  <div class="s7-split-wrap s7-opener-wrap">
+
+    <!-- Full-bleed title: enlarged as section opener -->
+    <div class="s7-left s7-opener-left">
+      <div class="s7-title-block">
+        <h2 class="s7-title s7-opener-title">Why Brands Choose Cobblestone&nbsp;Labs.</h2>
+        <p class="s7-tagline s7-opener-tagline">Trust earned over decades.<br>Expertise built for what's next.</p>
+      </div>
+      <!-- CAPS STRIP: under title + subtitle, larger text so it wraps to ~2 lines -->
+      <!-- BATCH5 items 9+10: kicker removed; list 2x, no pill, anchored to lower area; 8 items per copy bible -->
+      <div class="s7-caps-strip" style="margin-top:clamp(24px,calc(2.8*var(--uh)),42px); width:100%; box-sizing:border-box;">
+        <!-- BATCH27 2026-07-09: slide-7 swap — serpentine flow grid from SANDBOX-S7 (replaces BATCH9 numbered seq) -->
+        <!-- SANDBOX-S7 REDESIGN 2026-07-09: serpentine 4x2 flow grid — row 1 L->R, row 2 R->L, arrows honest to sequence -->
+        <div class="s7-flow-grid">
+          <div class="s7-flow-card arr-right" data-step="1"><span class="s7-flow-lbl">Strategy</span><span class="s7-flow-arrow" aria-hidden="true"><span>→</span></span></div>
+          <div class="s7-flow-card arr-right" data-step="2"><span class="s7-flow-lbl">Creative</span><span class="s7-flow-arrow" aria-hidden="true"><span>→</span></span></div>
+          <div class="s7-flow-card arr-right" data-step="3"><span class="s7-flow-lbl">Content</span><span class="s7-flow-arrow" aria-hidden="true"><span>→</span></span></div>
+          <div class="s7-flow-card arr-down" data-step="4"><span class="s7-flow-lbl">Storytelling</span><span class="s7-flow-arrow" aria-hidden="true"><span>↓</span></span></div>
+          <div class="s7-flow-card arr-left" data-step="5"><span class="s7-flow-lbl">Design</span><span class="s7-flow-arrow" aria-hidden="true"><span>←</span></span></div>
+          <div class="s7-flow-card arr-left" data-step="6"><span class="s7-flow-lbl">Technology</span><span class="s7-flow-arrow" aria-hidden="true"><span>←</span></span></div>
+          <div class="s7-flow-card arr-left" data-step="7"><span class="s7-flow-lbl">Production</span><span class="s7-flow-arrow" aria-hidden="true"><span>←</span></span></div>
+          <div class="s7-flow-card " data-step="8"><span class="s7-flow-lbl">Measurement</span></div>
+        </div>
+      </div>
+    </div><!-- /.s7-left -->
+
+  </div><!-- /.s7-split-wrap -->
+</section>
+
+<!-- ════════════ SLIDE 8 - 01 Our Innovation ════════════ -->
+<section class="slide" id="s8">
+  <!-- BATCH12 item1 2026-07-08: s8 reformatted to match the s9/s10 family — title-left column, panel-card right, same grid/typography. Woman-at-light-grid bg kept; scrim mirrors s9 (darker left for title legibility) but capped so she + radiating lines still read -->
+  <div class="slide-bg" style="background-image:url('assets/s8-lightgrid-woman.webp'); background-size:cover; background-position:left 45%;"></div>
+  <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(8,7,10,0.56) 0%, rgba(8,7,10,0.32) 38%, rgba(8,7,10,0.06) 58%, rgba(8,7,10,0.12) 100%), linear-gradient(180deg, rgba(8,7,10,0.30) 0%, rgba(8,7,10,0.06) 28%, rgba(8,7,10,0) 48%, rgba(8,7,10,0.18) 100%);"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-08</span></div>
+  <div class="slide-inner reveal" style="flex-direction:column; gap:clamp(28px,calc(3.2*var(--uh)),48px);">
+    <img class="mobile-inline-img" src="assets/s8-lightgrid-woman.webp" alt="Woman pressing her palm against a glowing interactive light-grid wall" loading="lazy">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px, calc(5 * var(--uw)), 80px); align-items:center;">
+      <div>
+        <span class="big-num">01</span>
+        <h2 class="display" style="font-size:clamp(30px, calc(3.8 * var(--uw)), 54px); margin-top:12px;">Our Innovation Meets Your&nbsp;Ambition.</h2>
+        <div class="subhead">Your Brand's Vision. Our Innovation Engine. Unlimited&nbsp;Possibilities.</div>
+      </div>
+      <div class="panel-card">
+        <ul class="bullets" style="margin:0;">
+          <li>Among the first to fuse AI with immersive real-world environments at scale</li>
+          <li>Proprietary AI applications built-in-house and integrated with leading hardware providers through our strategic partnerships</li>
+          <li>Our R&amp;D Lab, based in NYC, for exploring, testing, and validating concepts before deployment</li>
+        </ul>
+        <div style="margin-top:24px; padding-top:18px; border-top:1px solid var(--line-soft); font:700 clamp(19px,calc(1.8*var(--uw)),28px) var(--font-body); letter-spacing:0.08em; text-transform:uppercase; background:linear-gradient(135deg,#D9DBF4,#7F83A7); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">Where industry comes to evolve.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 9 - 02 Proven Experience ════════════ -->
+<section class="slide" id="s9">
+  <!-- batch8 item7: bg changed from s9-particles-girl to s9-pink-archways -->
+  <div class="slide-bg" style="background-image:url('assets/s9-pink-archways.webp'); background-size:cover; background-position:center 40%;"></div>
+  <!-- batch8 item7: lighter scrim so pink shows through; left side darker for text legibility -->
+  <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(8,7,10,0.60) 0%, rgba(8,7,10,0.33) 38%, rgba(8,7,10,0.04) 58%, rgba(8,7,10,0.10) 100%), linear-gradient(180deg, rgba(8,7,10,0.32) 0%, rgba(8,7,10,0.06) 28%, rgba(8,7,10,0) 48%, rgba(8,7,10,0.18) 100%);"></div>
+  <!-- batch8 item7: extra mask on upper-left corner to subdue baked-in "your brand" text -->
+  <div aria-hidden="true" style="position:absolute; top:0; left:0; width:55%; height:60%; z-index:1; background:linear-gradient(135deg, rgba(8,7,10,0.88) 0%, rgba(8,7,10,0.62) 45%, rgba(8,7,10,0.25) 70%, transparent 100%); pointer-events:none;"></div>
+  <div class="orbs" aria-hidden="true"><span class="orb orb-1"></span><span class="orb orb-2"></span></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-09</span></div>
+  <div class="slide-inner reveal" style="flex-direction:column; gap:clamp(28px,calc(3.2*var(--uh)),48px);">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px, calc(5 * var(--uw)), 80px); align-items:center;">
+      <div>
+        <span class="big-num">02</span>
+        <h2 class="display" style="font-size:clamp(30px, calc(3.8 * var(--uw)), 54px); margin-top:12px;">Proven Experience. Trusted&nbsp;Execution.</h2>
+        <!-- BATCH40 2026-07-09: s9 subhead color matched to s8 (removed inline #D9DBF4 override; now .subhead var(--peach-2) #C47D6A) -->
+        <div class="subhead">25+ years delivering experiential solutions for world class brands — now powered by&nbsp;AI.</div>
+      </div>
+      <div class="panel-card">
+        <ul class="bullets" style="margin:0;">
+          <li>Deep AI development capabilities combined with hands-on production expertise</li>
+          <li>Industry agnostic, leading engagements across CPG, healthcare, retail, finance, entertainment, and beyond</li>
+          <li>Transformative AI-powered experiences for brand activations, flagship events, and commercial spaces</li>
+        </ul>
+        <div style="margin-top:24px; padding-top:18px; border-top:1px solid var(--line-soft); font:700 clamp(19px,calc(1.8*var(--uw)),28px) var(--font-body); letter-spacing:0.08em; text-transform:uppercase; background:linear-gradient(135deg,#D9DBF4,#7F83A7); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">Our team is your advantage.</div>
+      </div>
+    </div>
+    <!-- BATCH5 item5: logo strip + "Trusted By" REMOVED from s9 -->
+    
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 10 - 03 End-to-End Delivery ════════════ -->
+<section class="slide dark-only" id="s10">
+  <div class="slide-bg" style="background-image:url('assets/s10-sneaker-holo-v2.webp'); background-size:cover; background-position:center;"></div>
+  <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(8,7,10,0.64) 0%, rgba(8,7,10,0.38) 38%, rgba(8,7,10,0.10) 62%, rgba(8,7,10,0.20) 100%), linear-gradient(180deg, rgba(8,7,10,0.45) 0%, rgba(8,7,10,0.07) 28%, rgba(8,7,10,0) 52%, rgba(8,7,10,0.18) 100%);"></div>
+  <div class="bloom" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-10</span></div>
+  <div class="slide-inner reveal" style="flex-direction:column; gap:clamp(28px,calc(3.2*var(--uh)),48px);">
+    <img class="mobile-inline-img" src="assets/s10-sneaker-holo-v2.webp" alt="" loading="lazy">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px, calc(5 * var(--uw)), 80px); align-items:center;">
+      <div>
+        <span class="big-num">03</span>
+        <h2 class="display" style="font-size:clamp(30px, calc(3.8 * var(--uw)), 54px); margin-top:12px;">End-to-End Flexible&nbsp;Delivery</h2>
+        <div class="subhead">Engage us for a single capability or the entire solution. We scale to match your&nbsp;needs.</div>
+      </div>
+      <div class="panel-card">
+        <ul class="bullets" style="margin:0;">
+          <li>Multidisciplinary team, all under one roof</li>
+          <li>Seamless integration with your agency or in-house team</li>
+          <li>Technology and partner ecosystem management</li>
+        </ul>
+        <div style="margin-top:24px; padding-top:18px; border-top:1px solid var(--line-soft); font:700 clamp(19px,calc(1.8*var(--uw)),28px) var(--font-body); letter-spacing:0.08em; text-transform:uppercase; background:linear-gradient(135deg,#D9DBF4,#7F83A7); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">We manage the complexity so you don't have to.</div>
+      </div>
+    </div>
+    <!-- BATCH4: Capabilities strip moved BACK to s7; s10 restored to its clean state -->
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 11 - Ted Quote ════════════ -->
+<section class="slide" id="s11" style="padding:0;">
+  <!-- ITEM8: s11-staggered-led bg -->
+  <div class="slide-bg" style="background-image:url('assets/s11-staggered-led.webp'); background-size:cover; background-position:center;"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-11</span></div>
+  <div class="slide-inner reveal s11-inner">
+    <img class="mobile-inline-img" src="assets/s11-staggered-led.webp" alt="" loading="lazy">
+    <div class="quote-card-right">
+      <p class="qcr-text">"AS AI OPENS THE DOOR TO NEW POSSIBILITIES, THE REAL DIFFERENTIATOR ISN'T THE TECHNOLOGY ITSELF. IT'S THE ABILITY TO MOVE SEAMLESSLY FROM VISION TO PRODUCTION-READY, CREATING EXPERIENCES PEOPLE CAN ACTUALLY SEE, FEEL, AND REMEMBER. THAT'S WHAT SETS COBBLESTONE LABS APART."</p>
+      <div class="qcr-attr">
+        <div class="qcr-name">TED BARNETT</div>
+        <div class="qcr-title">CO-FOUNDER, COBBLESTONE LABS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 12 - The Lab ════════════ -->
+<section class="slide" id="s12" style="padding-top:clamp(36px, calc(4.5 * var(--uh)), 60px); padding-bottom:clamp(28px, calc(3.5 * var(--uh)), 48px); justify-content:flex-start;">
+  <!-- Full-bleed atmospheric curtain bg -->
+  <div class="slide-bg" style="background-image:url('assets/lab-curtain-bg.webp');"></div>
+  <!-- Additional darken scrim -->
+  <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(8,7,10,0.28) 0%, rgba(8,7,10,0.12) 40%, rgba(8,7,10,0.22) 75%, rgba(8,7,10,0.38) 100%);"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-12</span></div>
+  <div class="slide-inner reveal" style="position:relative; z-index:2; display:flex; flex-direction:column; gap:clamp(10px, calc(1.3 * var(--uh)), 18px);">
+
+    <!-- TITLE ROW: eyebrow left | The Lab title LEFT | intro paragraph RIGHT -->
+    <!-- s12-fix: padding-top clears "12 / 19" counter; minimum 42px so eyebrow never overlaps -->
+    <div style="display:flex; flex-direction:column; gap:4px; padding-top:clamp(42px, calc(5.2 * var(--uh)), 64px);">
+      <div class="eyebrow" style="margin-top:clamp(10px, calc(1.3 * var(--uh)), 18px); margin-bottom:4px;"><span class="tick">▸</span>Opening Fall 2026, Chelsea&nbsp;NYC</div><!-- BATCH21 2026-07-09: one row of spacing above eyebrow -->
+      <div style="display:grid; grid-template-columns:auto 1fr; gap:clamp(28px, calc(3.5 * var(--uw)), 56px); align-items:center;">
+        <h2 class="display" style="font-size:clamp(44px, calc(5.8 * var(--uw)), 84px); margin:0; white-space:nowrap;">The&nbsp;Lab</h2>
+        <p style="margin:0; font-size:clamp(14px, calc(1.1 * var(--uw)), 16px); color:var(--body); line-height:1.55; max-width:56em;">A first-of-its-kind commercial R&amp;D environment in the heart of Manhattan, purpose-built to develop, test, and deploy AI-powered experiences at the speed and scale modern brands&nbsp;demand.</p>
+      </div>
+    </div>
+
+    <!-- BATCH5 item14: new render centered above, cards 3x2 below matching image width -->
+    <!-- BATCH9 item4 2026-07-08: transparent-bg render — border/box-bg removed, object-fit:contain so it never crops, holder a bit smaller -->
+    <!-- BATCH10 item3 2026-07-08: everything scaled back UP (render, cards, text); ecosystem line one size DOWN -->
+    <!-- S12FIX 2026-07-08: render enlarged substantially + dead-zone closed (height clamp 185-300 -> 300-500, wrap widened) -->
+    <!-- BATCH11 item3 2026-07-08: render scaled up another ~30% (42uh->54uh, cap 500->620), full-width stage so the upper-right band closes; still contain/uncropped/no box -->
+    <div class="s12-render-wrap" style="width:min(98%, 1520px); margin:0 auto;">
+      <picture>
+        <source media="(max-width: 900px)" srcset="assets/s12-lab-aerial-horizontal.webp">
+        <img src="assets/s12-lab-render-2026-trim.webp" alt="The Lab — aerial render of the multi-floor AI experience space" loading="eager" style="width:100%; height:clamp(360px, calc(56 * var(--uh)), 640px); object-fit:contain; object-position:center; display:block; margin-top:calc(-2 * var(--uh));">
+      </picture>
+    </div>
+    <!-- BATCH7 2026-07-07: "The Lab is where creativity meets engineering..." sentence removed per Theresa -->
+    <!-- BATCH9 item4a 2026-07-08: ecosystem line enlarged -->
+    <div style="text-align:center; font:700 clamp(14px,calc(1.15*var(--uw)),18px) var(--font-mono); letter-spacing:0.22em; text-transform:uppercase; color:var(--copper); padding-bottom:8px;">The Ecosystem That Powers Every Brand Experience We Build</div>
+    <div class="s12-cards-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:clamp(12px, calc(1.4 * var(--uw)), 22px); width:min(88%, 1240px); margin:0 auto;">
+      <div class="lab-sys">
+        <h4>360° Projection Mapping &amp; Spatial Computing&nbsp;Systems</h4>
+        <p style="font-size:clamp(14px, calc(1.1 * var(--uw)), 16px);">Transforms physical spaces into immersive, responsive&nbsp;environments.</p>
+      </div>
+      <div class="lab-sys">
+        <h4>Virtual Production Studio&nbsp;(VPS)</h4>
+        <p style="font-size:clamp(14px, calc(1.1 * var(--uw)), 16px);">Blends live-action content creation with dynamic 3D settings in real&nbsp;time.</p>
+      </div>
+      <div class="lab-sys">
+        <h4>Advanced Display Technologies &amp; Digital&nbsp;Surfaces</h4>
+        <p style="font-size:clamp(14px, calc(1.1 * var(--uw)), 16px);">Delivers high-impact visual experiences across LED and interactive&nbsp;displays.</p>
+      </div>
+      <div class="lab-sys">
+        <h4>Computer Vision, Cameras &amp; Environmental&nbsp;Sensing</h4>
+        <p style="font-size:clamp(14px, calc(1.1 * var(--uw)), 16px);">Detects and interprets audience behavior and environmental conditions to integrate into a live&nbsp;experience.</p>
+      </div>
+      <div class="lab-sys">
+        <h4>Spatial Audio &amp; Responsive Sound&nbsp;Environments</h4>
+        <p style="font-size:clamp(14px, calc(1.1 * var(--uw)), 16px);">Creates immersive sound experiences that respond to interactions and&nbsp;movement.</p>
+      </div>
+      <div class="lab-sys">
+        <h4>Real-Time AI &amp; Adaptive Content&nbsp;Systems</h4>
+        <p style="font-size:clamp(14px, calc(1.1 * var(--uw)), 16px);">Dynamically generates and adapts content based on audience and environmental&nbsp;inputs.</p>
+      </div>
+    </div><!-- /.s12-cards-grid -->
+
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 13 - Let's Build Together ════════════ -->
+<section class="slide" id="s13">
+  <!-- ITEM9: s13-led-strip-room bg (note: source 1232x928, may appear soft at full desk) -->
+  <div class="slide-bg" style="background-image:url('assets/s13-led-strip-room.webp'); background-size:cover; background-position:center;"></div>
+  <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(8,7,10,0.65) 0%, rgba(8,7,10,0.50) 40%, rgba(8,7,10,0.65) 100%);"></div>
+  <div class="bloom" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-13</span></div>
+  <!-- BATCH12 item2 2026-07-08: reverted to the MONDAY layout (lifted from index.html.SAVE-pre-batch8-20260707) — title across the top, two side-by-side engage-card boxes with bullets. Box 2 carries 3 identical placeholder bullets per Theresa so both boxes match height -->
+  <div class="slide-inner reveal">
+    <img class="mobile-inline-img" src="assets/s13-led-strip-room.webp" alt="" loading="lazy">
+    <h2 class="display">Let's Build&nbsp;Together.</h2>
+    <div class="engage-grid">
+      <div class="engage-card">
+        <h3>Brand Experiences &amp;&nbsp;Installations</h3>
+        <p style="text-transform:uppercase; font-size:clamp(15px, calc(1.15 * var(--uw)), 17px); line-height:1.55; margin-bottom:18px;">Scoped, project-based-fee engagements with a defined deliverable, budget, and&nbsp;outcome.</p>
+        <ul class="bullets" style="margin:0; font-size:clamp(15px, calc(1.15 * var(--uw)), 17px); line-height:1.6;">
+          <li>We handle strategy through deployment as one accountable team</li>
+          <li>Priced per engagement based on scale, scope, and duration</li>
+          <li>Full production, metrics, and impact reporting included</li>
+        </ul>
+      </div>
+      <div class="engage-card">
+        <h3>R&amp;D Partnership at The&nbsp;Lab</h3>
+        <p style="text-transform:uppercase; font-size:clamp(15px, calc(1.15 * var(--uw)), 17px); line-height:1.55; margin-bottom:18px;">A standing innovation capability, not a one-time&nbsp;campaign.</p>
+        <ul class="bullets" style="margin:0; font-size:clamp(15px, calc(1.15 * var(--uw)), 17px); line-height:1.6;">
+          <li>Dedicated Lab access, opening this fall, for testing, prototyping, and co-development</li>
+          <li>Priority access to emerging technology before broader market release</li>
+          <li>Defined R&amp;D cycles per year with preferred pricing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 14 - Contact ════════════ -->
+<section class="slide" id="s14">
+  <div class="orbs" aria-hidden="true"><span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-14</span></div>
+  <div class="slide-inner reveal" style="text-align:center;">
+    <img class="mobile-inline-img" src="assets/mixology-band-clean2.webp" alt="" loading="lazy">
+
+    <h2 class="display">Ready to Start the&nbsp;Conversation?</h2>
+    <p class="lede" style="text-align:center; margin:18px auto 0;">Connect with our Innovation Team</p>
+    <div style="display:flex; flex-wrap:wrap; gap:24px; justify-content:center; margin-top:44px;">
+      <div class="contact-card">
+        <div class="contact-name">Ron Reisman</div>
+        <div class="contact-detail"><a href="mailto:ron@cobblestonelabs.com" style="color:var(--peach-2);">ron@cobblestonelabs.com</a></div>
+        <div class="contact-detail">917-885-4722</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-name">Abby Lyall</div>
+        <div class="contact-detail"><a href="mailto:abby@cobblestonelabs.com" style="color:var(--peach-2);">abby@cobblestonelabs.com</a></div>
+        <div class="contact-detail">330-697-1654</div>
+      </div>
+    </div>
+    <div style="margin-top:44px;"><a class="cta-link-box" href="https://cobblestonelabs.com" target="_blank" rel="noopener"><span class="cta-link-label">Visit cobblestonelabs.com</span><span class="cta-link-arrow" aria-hidden="true">↗</span></a></div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 15 - Portfolio Selections Title ════════════ -->
+<section class="slide" id="s15">
+  <!-- ITEM10: s15-particles-girl bg -->
+  <div class="slide-bg" style="background-image:url('assets/s15-particles-girl.webp'); background-position:center; background-size:cover; opacity:0.62;"></div>
+  <div class="orbs" aria-hidden="true"><span class="orb orb-1"></span><span class="orb orb-2"></span></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-15</span></div>
+  <div class="slide-inner reveal" style="text-align:center; display:flex; align-items:center; justify-content:center; min-height:600px;">
+    <img class="mobile-inline-img" src="assets/s15-particles-girl.webp" alt="" loading="lazy">
+    <div>
+
+      <h2 class="display" style="font-size:clamp(52px, calc(7.5 * var(--uw)), 110px);"><!-- BATCH20 2026-07-09 --><span class="s15-title-line">Portfolio</span> <span class="s15-title-line">Selections</span></h2>
+      <div style="width:240px; height:1px; margin:24px auto 0; background:linear-gradient(90deg, transparent, #FFE2C0, #C47D6A, transparent);"></div>
+      <!-- batch6 item1: client names (WellSky · Canon · Clinique) removed per Theresa -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 16 - Case Study: WellSky ════════════ -->
+<!-- batch8 item4: new template - boardroom = low-opacity full-bleed bg; kiosk+reception stacked left; text right -->
+<section class="slide cs-new-template" id="s16" style="padding-top:clamp(56px, calc(7 * var(--uh)), 88px);">
+  <!-- Full-bleed bg: boardroom at ~0.30 opacity -->
+  <div class="cs-bg-layer" style="background-image:url('assets/casestudies/wellsky-boardroom.webp');"></div>
+  <!-- Dark scrim for legibility -->
+  <div class="cs-dark-scrim" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-16</span></div>
+  <div class="cs-kicker-corner">Case Study&nbsp;&nbsp;01</div>
+  <div class="slide-inner reveal">
+    <div class="cs-kicker">Case Study</div>
+    <div class="cs-new-layout">
+      <!-- LEFT: two stacked photos -->
+      <div class="cs-stacked-imgs">
+        <img src="assets/casestudies/wellsky-kiosk.webp" alt="WellSky lobby kiosk" loading="lazy">
+        <img src="assets/casestudies/wellsky-reception.webp" alt="WellSky reception desk" loading="lazy">
+      </div>
+      <!-- RIGHT: text unchanged -->
+      <div>
+        <h2 class="cs-title">WellSky</h2>
+        <div style="font:700 13px var(--font-mono); letter-spacing:0.26em; text-transform:uppercase; color:var(--peach-2); margin-bottom:16px;">Reinventing the Client Experience&nbsp;Center</div>
+        <p class="cs-body">We converted WellSky's Client Experience Center from a passive space into an active sales engine powered by personalization, interactive storytelling, and a unified narrative across the care&nbsp;continuum.</p>
+        <div class="cs-section-label">Key Deliverables</div>
+        <ul class="bullets" style="margin:0;">
+          <li>Bespoke Interactive Tech Moments (projection mapping, interactive kiosk, feature LED walls)</li>
+          <li>Experiential Storytelling</li>
+          <li>Content Development</li>
+          <li>Space Design</li>
+        </ul>
+        <div class="cs-section-label" style="margin-top:22px;">Results</div>
+        <ul class="bullets" style="margin:0;">
+          <li>Improved consistency of sales presentations</li>
+          <li>Increased confidence in demo environment</li>
+          <li>Enabled premium, personalized visit flows for VIP guests</li>
+          <li>Established foundation for scalable expansion</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 17 - Case Study: Canon ════════════ -->
+<!-- batch8 item5: new template - dome (cs-03) = full-bleed bg; stacked left = cs-02 (two women) + canon-benches; text right -->
+<section class="slide cs-new-template" id="s17" style="padding-top:clamp(56px, calc(7 * var(--uh)), 88px);">
+  <!-- Full-bleed bg: Canon dome at ~0.30 opacity -->
+  <div class="cs-bg-layer" style="background-image:url('assets/casestudies/cs-03.webp');"></div>
+  <!-- Dark scrim for legibility -->
+  <div class="cs-dark-scrim" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-17</span></div>
+  <div class="cs-kicker-corner">Case Study&nbsp;&nbsp;02</div>
+  <div class="slide-inner reveal">
+    <div class="cs-kicker">Case Study</div>
+    <div class="cs-new-layout">
+      <!-- LEFT: two stacked photos -->
+      <div class="cs-stacked-imgs">
+        <img src="assets/casestudies/cs-02.webp" alt="Canon Joy of Photography" loading="lazy">
+        <img src="assets/casestudies/canon-benches.webp" alt="Canon dome interior" loading="lazy">
+      </div>
+      <!-- RIGHT: text unchanged -->
+      <div>
+        <h2 class="cs-title">Canon</h2>
+        <p class="cs-body">At the US Open, we transformed Canon's 50-foot dome into an immersive engagement platform, blending projection mapping, interactive touchscreen experiences, and real-time photo capture to drive measurable&nbsp;participation.</p>
+        <div class="cs-section-label">Key Deliverables</div>
+        <ul class="bullets" style="margin:0;">
+          <li>Large-Scale Experiential Technology Systems</li>
+          <li>Interactive Touchscreen Environments</li>
+          <li>Projection Mapping Integration</li>
+          <li>On-Site Data Capture &amp; Sweepstakes Infrastructure</li>
+        </ul>
+        <div class="cs-section-label" style="margin-top:22px;">Results</div>
+        <div class="cs-results">
+          <div class="result-item"><span class="result-val">150K</span>On-site photos taken</div>
+          <div class="result-item"><span class="result-val">175K</span>Sweepstakes entries</div>
+          <div class="result-item"><span class="result-val">40M</span>Impressions</div>
+          <div class="result-item"><span class="result-val">∞</span>Scalable model</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 18 - Case Study: Clinique ════════════ -->
+<!-- batch8 item6: new template - makeup-closeup = full-bleed bg; stacked left = lasersmart-wide + laseriq-tablet; text right -->
+<section class="slide cs-new-template" id="s18" style="padding-top:clamp(56px, calc(7 * var(--uh)), 88px);">
+  <!-- Full-bleed bg: Clinique makeup closeup at ~0.30 opacity -->
+  <div class="cs-bg-layer" style="background-image:url('assets/casestudies/clinique-makeup-closeup.webp');"></div>
+  <!-- Dark scrim for legibility -->
+  <div class="cs-dark-scrim" aria-hidden="true"></div>
+  <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brc"></span>
+  <div class="counter"><span class="cnt">-18</span></div>
+  <div class="cs-kicker-corner">Case Study&nbsp;&nbsp;03</div>
+  <div class="slide-inner reveal">
+    <div class="cs-kicker">Case Study</div>
+    <div class="cs-new-layout">
+      <!-- LEFT: two stacked photos -->
+      <div class="cs-stacked-imgs">
+        <img src="assets/casestudies/clinique-lasersmart-wide.webp" alt="Clinique Laser Smart Macy's" loading="lazy">
+        <img src="assets/casestudies/clinique-laseriq-tablet.webp" alt="Clinique Laser IQ tablet" loading="lazy">
+      </div>
+      <!-- RIGHT: text unchanged -->
+      <div>
+        <h2 class="cs-title">Clinique</h2>
+        <p class="cs-body">Our team developed a gamified, self-guided interactive experience that simplifies a complex beauty product, driving fast understanding, engagement and conversion. Initially rolled out in a pop-up activation at Macy's flagship store in NYC, the experience was adapted to hundreds of Macy's stores across the United&nbsp;States.</p>
+        <div class="cs-section-label">Key Deliverables</div>
+        <ul class="bullets" style="margin:0;">
+          <li>Bespoke Interactive Kiosk Application</li>
+          <li>Experiential Retail Engagement Design</li>
+          <li>Custom Software Development</li>
+          <li>Multi-location Deployment System</li>
+        </ul>
+        <div class="cs-section-label" style="margin-top:22px;">Results</div>
+        <div class="cs-results">
+          <div class="result-item"><span class="result-val">30K+</span>In-store engagements</div>
+          <div class="result-item"><span class="result-val">↑</span>Increased dwell time</div>
+          <div class="result-item"><span class="result-val">✓</span>Improved product understanding</div>
+          <div class="result-item"><span class="result-val">∞</span>Repeatable retail model</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /.deck -->
+
+<div class="navdots" id="navdots"></div>
+
+<script>
+(function(){
+  var SLIDE_W = 1440;
+  var MOBILE_MAX = 1024;
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+
+  slides.forEach(function(slide){
+    var stage = document.createElement('div');
+    stage.className = 'slide-stage';
+    slide.parentNode.insertBefore(stage, slide);
+    stage.appendChild(slide);
+  });
+  var stages = Array.prototype.slice.call(document.querySelectorAll('.slide-stage'));
+
+  function fit(){
+    var w = Math.min(window.innerWidth, document.documentElement.clientWidth);
+    var mobile = w <= MOBILE_MAX;
+    document.body.classList.toggle('mobile-deck', mobile);
+    var scale = mobile ? 1 : (w / SLIDE_W);
+    stages.forEach(function(stage){
+      var s = stage.querySelector('.slide');
+      if (mobile) {
+        stage.style.height = '';
+        s.style.transform = '';
+      } else {
+        var h = s.offsetHeight;
+        stage.style.height = (h * scale) + 'px';
+        s.style.transform = 'scale(' + scale + ')';
+      }
+    });
+  }
+  var s12CardsGrid = document.querySelector('#s12 .s12-cards-grid');
+  function syncS12MobileLayout(width) {
+    if (!s12CardsGrid) return;
+    if (width <= 390) {
+      s12CardsGrid.style.setProperty('grid-template-columns', '1fr', 'important');
+      s12CardsGrid.style.setProperty('gap', '10px', 'important');
+    } else if (width <= MOBILE_MAX) {
+      s12CardsGrid.style.setProperty('grid-template-columns', 'repeat(2, minmax(0, 1fr))', 'important');
+      s12CardsGrid.style.setProperty('gap', '12px', 'important');
+    } else {
+      s12CardsGrid.style.setProperty('grid-template-columns', 'repeat(3, 1fr)');
+      s12CardsGrid.style.setProperty('gap', 'clamp(10px, calc(1.2 * var(--uw)), 18px)');
+    }
+  }
+  window.addEventListener('load', fit);
+  window.addEventListener('DOMContentLoaded', fit);
+  fit();
+  window.addEventListener('resize', fit, { passive: true });
+  // Hook into fit so the narrowest mobile breakpoint gets a true single-column stack.
+  var _origFit = fit;
+  fit = function() {
+    _origFit();
+    var w = Math.min(window.innerWidth, document.documentElement.clientWidth);
+    syncS12MobileLayout(w);
+  };
+  fit();
+
+  function currentIndex(){
+    var y = window.scrollY + window.innerHeight * 0.4;
+    for (var i = 0; i < stages.length; i++){
+      var r = stages[i].getBoundingClientRect();
+      var top = r.top + window.scrollY;
+      var bottom = top + r.height;
+      if (y >= top && y < bottom) return i;
+    }
+    return 0;
+  }
+  function goTo(i){
+    i = Math.max(0, Math.min(stages.length - 1, i));
+    window.scrollTo({ top: stages[i].offsetTop, behavior: 'smooth' });
+  }
+  document.addEventListener('keydown', function(e){
+    if (e.target && e.target.matches && e.target.matches('input, textarea')) return;
+    if (['ArrowDown','PageDown',' ','ArrowRight'].indexOf(e.key) !== -1){ e.preventDefault(); goTo(currentIndex() + 1); }
+    else if (['ArrowUp','PageUp','ArrowLeft'].indexOf(e.key) !== -1){ e.preventDefault(); goTo(currentIndex() - 1); }
+    else if (e.key === 'Home'){ e.preventDefault(); goTo(0); }
+    else if (e.key === 'End'){ e.preventDefault(); goTo(stages.length - 1); }
+  });
+
+  var nav = document.getElementById('navdots');
+  stages.forEach(function(stage, i){
+    var slide = stage.querySelector('.slide');
+    var a = document.createElement('a');
+    a.href = '#' + (slide.id || ('slide'+i));
+    nav.appendChild(a);
+  });
+  var dots = Array.prototype.slice.call(nav.children);
+
+  document.documentElement.classList.add('js-reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      var idx = stages.indexOf(e.target);
+      if (e.isIntersecting) {
+        var r = e.target.querySelector('.reveal');
+        if (r) r.classList.add('in');
+        if (e.intersectionRatio > 0.5) {
+          dots.forEach(function(d){ d.classList.remove('active'); });
+          if (dots[idx]) dots[idx].classList.add('active');
+        }
+      }
+    });
+  }, { threshold: [0.15, 0.5] });
+  stages.forEach(function(s){ io.observe(s); });
+})();
+</script>
+</body>
+</html>
